@@ -1,0 +1,78 @@
+{
+  "status": "finite floating-point diagnostics; not interval-certified; RH not proved",
+  "python": "3.13.5",
+  "mpmath": "1.3.0",
+  "decimal_precision": 40,
+  "maximum_shifted_degree": 3,
+  "scale": 100,
+  "xi_half": "0.497120778188314109912773739685",
+  "moments": [
+    "0.0231049931154189707889338104303",
+    "0.0000371725992852696861648662624717",
+    "0.000000144173931400973279695381556095",
+    "6.63031680252990869873272081961e-10",
+    "3.21366415061660121610211659983e-12",
+    "1.58769345149101535189828388084e-14",
+    "7.90332572404673791109893061734e-17",
+    "3.9464713999988461337963290664e-19",
+    "1.97326507374496727652359622182e-21"
+  ],
+  "scaled_unshifted_determinants": [
+    "2.31049931154189707889338104303",
+    "0.194933555481914221473987821917",
+    "0.000217281051052624677495651744858",
+    "0.00000000117758171601017270195824056258",
+    "1.96218205320997936596578154182e-17"
+  ],
+  "scaled_shifted_determinants": [
+    "0.371725992852696861648662624717",
+    "0.00386048846787093841952413095008",
+    "0.000000311996028999615295242929725598",
+    "9.24213895905458816393176032099e-14"
+  ],
+  "unshifted_scaling_exponent": "(N+1)^2",
+  "shifted_scaling_exponent": "(N+1)(N+2)",
+  "block_checks": [
+    {
+      "size": 1,
+      "scaled_full_determinant": "4.62099862308379415778676208607",
+      "relative_block_residual": "0.0"
+    },
+    {
+      "size": 2,
+      "scaled_full_determinant": "3.43549060227353701202686234978",
+      "relative_block_residual": "0.0"
+    },
+    {
+      "size": 3,
+      "scaled_full_determinant": "0.579694955614566664206156287717",
+      "relative_block_residual": "1.9802548e-41"
+    },
+    {
+      "size": 4,
+      "scaled_full_determinant": "0.0120406198870241536289160254687",
+      "relative_block_residual": "0.0"
+    },
+    {
+      "size": 5,
+      "scaled_full_determinant": "0.000026841951740017094167931934394",
+      "relative_block_residual": "0.0"
+    },
+    {
+      "size": 6,
+      "scaled_full_determinant": "0.00000000433861280673802114253362145894",
+      "relative_block_residual": "0.0"
+    },
+    {
+      "size": 7,
+      "scaled_full_determinant": "4.70273048598690029218794865922e-14",
+      "relative_block_residual": "1.3875565e-41"
+    },
+    {
+      "size": 8,
+      "scaled_full_determinant": "2.7861437068820411373678483531e-20",
+      "relative_block_residual": "2.2335586e-41"
+    }
+  ],
+  "all_displayed_prefix_values_positive": true
+}
