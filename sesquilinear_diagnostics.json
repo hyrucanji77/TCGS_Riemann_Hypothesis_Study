@@ -1,0 +1,168 @@
+{
+  "status": "exact manufactured Gaussian-rational checks; not a proof of RH",
+  "inner_product_convention": "conjugate-linear in the first slot",
+  "eigenvalues": [
+    "1",
+    "1/2"
+  ],
+  "cross_form": {
+    "real": "241/16",
+    "imaginary": "-39/4"
+  },
+  "quadratic_form": {
+    "real": "321/32",
+    "imaginary": "0"
+  },
+  "bilinear_i_negative_control": {
+    "real": "-3/2",
+    "imaginary": "0"
+  },
+  "hermitian_i_control": {
+    "real": "3/2",
+    "imaginary": "0"
+  },
+  "check_count": 35,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "nontrivial complex cross form",
+      "passed": true
+    },
+    {
+      "name": "conjugate symmetry",
+      "passed": true
+    },
+    {
+      "name": "first slot conjugates i",
+      "passed": true
+    },
+    {
+      "name": "second slot preserves i",
+      "passed": true
+    },
+    {
+      "name": "first slot conjugates general scalar",
+      "passed": true
+    },
+    {
+      "name": "second slot preserves general scalar",
+      "passed": true
+    },
+    {
+      "name": "additivity first slot",
+      "passed": true
+    },
+    {
+      "name": "additivity second slot",
+      "passed": true
+    },
+    {
+      "name": "cross trace equals Hermitian moment form",
+      "passed": true
+    },
+    {
+      "name": "trace phase test",
+      "passed": true
+    },
+    {
+      "name": "1: real nonnegative quadratic value",
+      "passed": true
+    },
+    {
+      "name": "1: phase invariance",
+      "passed": true
+    },
+    {
+      "name": "1: norm-square scalar law",
+      "passed": true
+    },
+    {
+      "name": "1: real-imaginary decomposition",
+      "passed": true
+    },
+    {
+      "name": "1: trace diagonal equals quadratic form",
+      "passed": true
+    },
+    {
+      "name": "1: adjoint at eigenvalue 1",
+      "passed": true
+    },
+    {
+      "name": "1: adjoint at eigenvalue 1/2",
+      "passed": true
+    },
+    {
+      "name": "2: real nonnegative quadratic value",
+      "passed": true
+    },
+    {
+      "name": "2: phase invariance",
+      "passed": true
+    },
+    {
+      "name": "2: norm-square scalar law",
+      "passed": true
+    },
+    {
+      "name": "2: real-imaginary decomposition",
+      "passed": true
+    },
+    {
+      "name": "2: trace diagonal equals quadratic form",
+      "passed": true
+    },
+    {
+      "name": "2: adjoint at eigenvalue 1",
+      "passed": true
+    },
+    {
+      "name": "2: adjoint at eigenvalue 1/2",
+      "passed": true
+    },
+    {
+      "name": "3: real nonnegative quadratic value",
+      "passed": true
+    },
+    {
+      "name": "3: phase invariance",
+      "passed": true
+    },
+    {
+      "name": "3: norm-square scalar law",
+      "passed": true
+    },
+    {
+      "name": "3: real-imaginary decomposition",
+      "passed": true
+    },
+    {
+      "name": "3: trace diagonal equals quadratic form",
+      "passed": true
+    },
+    {
+      "name": "3: adjoint at eigenvalue 1",
+      "passed": true
+    },
+    {
+      "name": "3: adjoint at eigenvalue 1/2",
+      "passed": true
+    },
+    {
+      "name": "negative control: unbarred first slot is linear",
+      "passed": true
+    },
+    {
+      "name": "negative control: unbarred and Hermitian cross forms differ",
+      "passed": true
+    },
+    {
+      "name": "negative control: p=i gives negative bilinear square",
+      "passed": true
+    },
+    {
+      "name": "p=i gives positive Hermitian square",
+      "passed": true
+    }
+  ]
+}
