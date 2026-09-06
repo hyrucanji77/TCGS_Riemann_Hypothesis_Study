@@ -69,7 +69,7 @@ Copyright \copyright\ 2026 Henry Arellano-Pe\~na. This manuscript and its origin
 
 \bibitem{riemann}
 B. Riemann,
-\emph{Ueber die Anzahl der Primzahlen unter einer gegebenenen Gr\"osse},
+\emph{Ueber die Anzahl der Primzahlen unter einer gegebenen Gr\"osse},
 Monatsberichte der Berliner Akademie (1859), 671--680.
 Original text and translations: \url{https://www.maths.tcd.ie/pub/HistMath/People/Riemann/Zeta/}.
 
