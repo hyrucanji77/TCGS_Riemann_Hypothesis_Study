@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "source_and_reference_outputs_unchanged": true,
+  "manuscript_sha256": "ac81d0f3aaa5cbe1df54108a6165efcee2e29885637b9c21aa32d6dbbb490df6",
+  "pdf_sha256": "b65e24318d3a618aea7569ffa1800869361173c1f2003cf938c75679739d30af",
+  "bundle_sha256": "88cfd284a889c052284f01c8aed160f5d3017a1163bdbfc2773edd947205384a",
+  "bundle_files": 36,
+  "citation_sha256": "ce98578d6fc96c93aa68affd6c06dc8f0cf3663e35e99c8b28a82fa35fc2700e"
+}
