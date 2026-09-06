@@ -1,0 +1,188 @@
+Let $\src\in\mathcal X_{\mathrm{adm}}$ denote an admissible source configuration. Boldface distinguishes this source datum from the conventional Riemann function $\Xi(z)$. The typed informational map is
+\begin{equation}
+ \Info:\mathcal X_{\mathrm{adm}}\longrightarrow\mathcal I_{\mathrm{src}},
+ \qquad M_{\src}=\Info(\src).
+\end{equation}
+For selectors $\sigma=(X,[s],\mathcal B)$, let $\mathcal Y_\sigma$ be the corresponding readout spaces and $\mathcal P_{\mathrm{read}}=\prod_\sigma\mathcal Y_\sigma$. The ECL and its evaluations are
+\begin{align}
+ \ES&=\Read_{\mathcal S,G}\circ\Info,
+       &\ES&:\mathcal X_{\mathrm{adm}}\to\mathcal P_{\mathrm{read}},\label{eq:ecl}\\
+ \mathcal E_{\mathcal S,\src}&=\ES(\src),
+       &\mathcal E^\sigma_{\mathcal S,\src}&=\ev_\sigma\mathcal E_{\mathcal S,\src}.
+\end{align}
+An independently specified physical-readout map $\pi^{\mathrm{phys}}_\sigma$ then gives
+\begin{equation}
+ \mathcal O^\sigma_{\mathcal S}
+ =\pi^{\mathrm{phys}}_\sigma\circ\ev_\sigma\circ\Read_{\mathcal S,G}\circ\Info.
+ \label{eq:counterduction}
+\end{equation}
+This composition is the relevant 4D-Counterduction relation. It is not Counterspace itself, a second source manifold, or an independently evolving source process \cite{tcgsfoundation,tcgsoperator}.
+
+In particular, the map $\ES$, its profile value, and a scalar function subsequently used in an arithmetic calculation are not interchangeable. The scalar function $F$ introduced below is an analytic arithmetic target. No equation $F=\ES$ is asserted. Such an equality would erase both the source dependence of the ECL and the domain and codomain of the arithmetic function. An arithmetic application must instead specify a representation connecting an admissible source reduction to $F$, while retaining the distinction between the mathematical representation and the source it represents \cite{tcgsfoundation}.
+
+\subsection{The legitimate positive operator}
+The relevant operator construction is based on a physical-readout derivative, not an untyped Hessian of a profile-valued law. At a reference source configuration $\src_0$, suppose
+\begin{equation}
+ L_{\sigma,0}=D\mathcal O^\sigma_{\mathcal S}[\src_0]
+\end{equation}
+is densely defined and closable between specified Hilbert completions. Writing $L_\sigma$ for its closure, the natural operator
+\begin{equation}
+ O_\sigma=L_\sigma^*L_\sigma,\qquad
+ \Dom(O_\sigma)=\{v\in\Dom(L_\sigma):L_\sigma v\in\Dom(L_\sigma^*)\}
+ \label{eq:observability}
+\end{equation}
+is positive and self-adjoint. Its quadratic form is
+\begin{equation}
+ \langle v,O_\sigma v\rangle=\|L_\sigma v\|^2.
+ \label{eq:readoutnorm}
+\end{equation}
+The mathematical statement is standard closed-operator theory \cite{reed}; its use here follows the explicitly typed observability construction in the framework \cite{tcgsoperator}.
+
+The interpretation matters. Equation~\eqref{eq:readoutnorm} measures squared readout sensitivity in the declared norm. It does not automatically measure energy, nor does it imply that $O_\sigma$ has a discrete spectrum, a trace-class inverse, or the zeta zeros as eigenvalues. Banach charts, Hilbert metrics, derivative domains, closability, and selector comparison maps are additional analytic realization data. They are not inferred from the number of source dimensions \cite{tcgsoperator}.
+
+\subsection{What arithmetic must add}
+The formal inputs $(\CS,G,\Psi,p_0,\mathcal S)$ do not yet specify an action of integer multiplication, an Euler product, a prime-weighted trace, or a polynomial Gram map. Introducing such a map is legitimate as a proposed mathematical realization, but its construction must be displayed. A finite-dimensional protected response sector can be useful for a restricted physical application without encoding an infinite arithmetic spectrum. Section~\ref{sec:gram} makes this difference a rank obstruction rather than a verbal caution.
+
+Nor is a one-dimensional analytical coordinate prohibited by a four-dimensional source ontology. A coordinate on an auxiliary function space, a reduced corridor, or a Mellin transform is not a claim that the physical source has become one-dimensional. The distinction follows the framework's separation of source dimension, representation dimension, and operational carrier \cite{tcgsfoundation,tcgsgeometry}. It permits the half-line model below while preventing its formal success from identifying that half-line with Counterspace.
+
+\subsection{Conservative source cartography and reciprocal interfaces}
+\label{subsec:sourcecompatible}
+Two geometric constructions give additional content to the realization problem: the conservative discrete source-to-readout architecture and the reciprocal fractal-foam companion \cite{tcgsconservative,tcgsfoam}. They supply distinct ingredients. The former specifies orientation, dual volumes, shared-flux cancellation, compatible cochains, boundary completion, and selector transport. The latter supplies a candidate phase field $\phi$, reciprocal closed two-form, nonlinear potential $U$, and source-determined interface and corridor weights. Neither construction currently supplies an arithmetic insertion map or a prime trace. Their use below is restricted to those structures they actually define.
+
+The conservative paper distinguishes the ontic ECL from its scientific representation by a hat,
+\begin{equation}
+ \widehat{\mathcal E}_{\mathcal S,G}
+ =\Read_{\mathcal S,G}\circ\Info.
+ \label{eq:hattedcartography}
+\end{equation}
+The symbol $\ES$ in Equation~\eqref{eq:ecl} is used at this same formal-map level throughout the present analysis. No finite operator, equation, or mesh is identified exhaustively with the ontic law. This clarification preserves the map/profile/readout types while adopting the explicit distinction in the two geometric papers \cite{tcgsconservative,tcgsfoam}.
+
+Let $r$ index a declared refinement sequence on regularized source domains
+\begin{equation}
+ \Omega_{\varrho_r}=\CS\setminus N_{\varrho_r}(\mathcal S),
+ \qquad h_r\downarrow0,\quad\varrho_r\downarrow0.
+ \label{eq:regularizedsource}
+\end{equation}
+The sequence may additionally resolve diffuse interfaces or expand a noncompact domain; every such limit and its order must be specified. At fixed $r$, conservative assembly requires a shared flux with $\widehat Q_{kj}=-\widehat Q_{jk}$. A reciprocal-form realization additionally requires
+\begin{equation}
+ d_{q+1,r}d_{q,r}=0,
+ \qquad d_rX_{\sigma,r}^{*}=X_{\sigma,r}^{*}d_r.
+ \label{eq:compatiblecochains}
+\end{equation}
+The nodal volumes and directed hyperareas do not supply the full cochain complex or its Hodge matrices. They cannot be used as though the reciprocal two-form were an ordinary scalar nodal variable \cite{tcgsconservative,tcgsfoam}. Stable approximation of the associated Hilbert complex requires suitable subcomplexes and bounded commuting projections in addition to the algebraic identities \cite{arnoldfeec}.
+
+Gate T of the geometric constructions fixes the source action, singular orbit, complement topology, periods, and induced carrier classes before a harmonic sector is admitted. For example, the isolated-point complement in a four-ball has trivial degree-two cohomology. Gate S then requires all singular-boundary channels to descend from one declared functional $\mathcal B_{\mathcal S}$, with coefficients and excision scaling fixed independently of the target. Its prescribed variation jointly generates the phase flux, nonlinear-potential flux, reciprocal current, and traction:
+\begin{equation}
+ \delta\mathcal B_{\mathcal S}
+ =\int_{\partial N_{\varrho_r}(\mathcal S)}
+ \left[-Q^\phi_{\mathcal S}\delta\phi-Q^U_{\mathcal S}\delta U
+ +\langle J_{\mathcal S},\delta A_{\parallel}\rangle
+ -\langle t_{\mathcal S},\delta X\rangle\right]\dd A_G.
+ \label{eq:sharedboundaryvariation}
+\end{equation}
+The geometric papers state this requirement but do not construct the required shared functional. It therefore enters the response construction as explicit missing model data, not as a completed source derivation \cite{tcgsconservative,tcgsfoam}.
+
+The companion's corridor metric is $\widetilde G=w_{\mathrm{cor}}^{-2}G$, where $w_{\mathrm{cor}}$ denotes its source-determined readability weight, distinguished here from the complex arithmetic variable $w$. Its multifractal weight spectrum is not an eigenvalue counting theorem. Neither a corridor nor a harmonic period may be assigned a prime label and then cited as a derivation of that label. The reported median-dual and manufactured-curvature checks are implementation evidence within their stated tests; they do not establish spectral convergence, an arithmetic determinant, or the unresolved boundary functional \cite{tcgsconservative,tcgsfoam}.
+
+\section{The arithmetic target and its entire normalization}
+\label{sec:normalization}
+For $\Re s>1$, define
+\begin{equation}
+ \zeta(s)=\sum_{n=1}^{\infty}n^{-s}
+ =\prod_{p\ \mathrm{prime}}(1-p^{-s})^{-1}.
+ \label{eq:euler}
+\end{equation}
+The domain in Equation~\eqref{eq:euler} is essential: its absolutely convergent Euler product is not used on the critical line. Analytic continuation gives the meromorphic zeta function, and the completion
+\begin{equation}
+ \xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)
+ \label{eq:xi}
+\end{equation}
+is entire of order one. It satisfies $\xi(s)=\xi(1-s)$ and $\xi(\overline s)=\overline{\xi(s)}$. Its zeros are precisely the nontrivial zeta zeros, with multiplicity \cite{riemann,titchmarsh,dlmf}.
+
+Set
+\begin{equation}
+ \Xi(z)=\xi\!\left(\frac12+iz\right),\qquad
+ F(w)=\frac{\Xi(\sqrt w)}{\Xi(0)}.
+ \label{eq:normal}
+\end{equation}
+The second expression is notation for an entire power series, not a branch choice. Since $\Xi$ is even,
+\begin{equation}
+ \Xi(z)=\sum_{j=0}^{\infty}c_jz^{2j},\qquad
+ F(w)=\frac1{c_0}\sum_{j=0}^{\infty}c_jw^j.
+\end{equation}
+Consequently $F$ is a real entire function of order $1/2$ and $F(0)=1$. If $\rho=\beta+i\gamma$ is a zero with $\gamma>0$, its corresponding zero of $F$ is
+\begin{equation}
+ w_\rho=-(\rho-\tfrac12)^2
+       =\bigl(\gamma+i(\tfrac12-\beta)\bigr)^2.
+ \label{eq:zerochange}
+\end{equation}
+Exactly one representative of the pair $\rho,1-\rho$ is counted by taking $\gamma>0$. Off-line zeros give conjugate nonreal values of $w_\rho$. On-line zeros give $w_\rho=\gamma^2>0$.
+
+\begin{lemma}[Genus-zero normalization]
+\label{lem:product}
+Enumerate the zeros of $F$ as $(w_j)$ with multiplicity. Then
+\begin{equation}
+ \sum_j|w_j|^{-1}<\infty,\qquad
+ F(w)=\prod_j\left(1-\frac w{w_j}\right).
+ \label{eq:product}
+\end{equation}
+Moreover $F(-x)>0$ for $x\geq0$.
+\end{lemma}
+\begin{proof}
+The standard zero-counting estimate $N(T)=O(T\log T)$, where $N(T)$ counts nontrivial zeros with $0<\Im\rho\leq T$, implies $\sum_{\Im\rho>0}|\rho-1/2|^{-2}<\infty$ \cite{titchmarsh}. This is the first statement. Since $F$ has order $1/2<1$, its Hadamard factorization contains no nonconstant exponential factor. The normalization $F(0)=1$ gives Equation~\eqref{eq:product}. Finally, Section~\ref{sec:theta} derives the positive-kernel formula
+\[
+ \xi(\tfrac12+r)=\int_0^\infty\Phi(u)\cosh(ru)\dd u>0
+ \quad(r\in\R).
+\]
+Taking $r=\sqrt x$ and using the functional equation proves $F(-x)>0$.
+\end{proof}
+
+\begin{corollary}
+\label{cor:positivezeros}
+The Riemann hypothesis is equivalent to every zero of $F$ being positive real.
+\end{corollary}
+\begin{proof}
+Under the hypothesis Equation~\eqref{eq:zerochange} gives $w_\rho=\gamma^2$. Conversely, if $w_\rho>0$, the number $z=\gamma+i(1/2-\beta)$ has positive real part and real positive square. Its imaginary part is therefore zero, giving $\beta=1/2$.
+\end{proof}
+
+This normalization removes an avoidable ambiguity in spectral programmes. A self-adjoint operator with eigenvalues $\gamma$ is usually discussed on both sides of zero. A positive trace-class operator will instead have eigenvalues $\gamma^{-2}$. These are different spectral variables, with different counting laws and operator classes. Keeping the square and inverse explicit prevents an asymptotic calculation in one variable from being mistaken for a result in another.
+
+\section{Why the critical half is natural but not sufficient}
+\label{sec:half}
+\subsection{Reflection does not force a zero onto its fixed set}
+The holomorphic map $s\mapsto1-s$ has the single fixed point $s=1/2$. The antiholomorphic reflection $s\mapsto1-\overline s$ has the critical line as its fixed set. The functional equation and complex conjugation together preserve the zero set under these maps, but invariance of a set under a reflection does not imply that each of its points is fixed.
+
+For example, for $a,b>0$,
+\begin{equation}
+ P(z)=\bigl((z-a)^2+b^2\bigr)\bigl((z+a)^2+b^2\bigr)
+ \label{eq:quartet}
+\end{equation}
+is even and real on the real axis, while its zeros are $\pm a\pm ib$. Taking $0<b<1/2$ places the corresponding $s=1/2+iz$ zeros inside the critical strip but off its central line. This elementary example is not a counterexample to RH: it has no zeta Euler product. It refutes only the inference from reflection symmetry to pointwise zero confinement.
+
+\subsection{The half-density calculation}
+There is nevertheless a precise analytical reason for a factor $1/2$ in a scale representation. On $L^2(\R_+,\dd x)$ define, for $a>0$,
+\begin{equation}
+ (D_af)(x)=a^{1/2}f(ax).
+ \label{eq:dilation}
+\end{equation}
+A change of variables gives $\|D_af\|_2=\|f\|_2$. Under the logarithmic unitary map
+\begin{equation}
+ (Uf)(r)=\e^{r/2}f(\e^r),\qquad
+ U:L^2(\R_+,\dd x)\longrightarrow L^2(\R,\dd r),
+ \label{eq:logunitary}
+\end{equation}
+dilation becomes translation: $UD_{\e^v}U^{-1}g(r)=g(r+v)$.
+
+\begin{proposition}[Half-density generator]
+\label{prop:half}
+The operator
+\begin{equation}
+ B=-i\left(x\frac{\dd}{\dd x}+\frac12\right)
+ \label{eq:dilationgenerator}
+\end{equation}
+on $C_c^\infty(\R_+)$ is essentially self-adjoint. Its closure is unitarily equivalent to $-i\dd/\dd r$ on $L^2(\R)$ and has purely continuous spectrum $\R$.
+\end{proposition}
+\begin{proof}
+Differentiating Equation~\eqref{eq:logunitary} gives $UBU^{-1}=-i\dd/\dd r$ on $C_c^\infty(\R)$. The Fourier transform realizes the closure of the latter as multiplication by a real variable, with domain consisting of functions whose Fourier transforms remain square-integrable after multiplication by that variable. This multiplication operator is self-adjoint and has no square-integrable point eigenvectors. Its spectrum is $\R$. Unitary equivalence gives the assertion.
+\end{proof}
+
