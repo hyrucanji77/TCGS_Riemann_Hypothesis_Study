@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'main.tex'
+      - '.upload_source/ready.json'
       - '.github/workflows/build-paper.yml'
   workflow_dispatch:
 
@@ -18,10 +19,37 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Check out the manuscript
         uses: actions/checkout@v4
+      - name: Assemble the exact source on initial import
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json
+          manifest_path = Path('.upload_source/ready.json')
+          if manifest_path.exists():
+              manifest = json.loads(manifest_path.read_text())
+              chunks = []
+              for item in manifest['parts']:
+                  path = Path(item['path'])
+                  if path.parent != Path('.upload_source') or path.suffix != '.txt':
+                      raise SystemExit('Invalid source-part path')
+                  data = path.read_bytes()
+                  if hashlib.sha256(data).hexdigest() != item['sha256']:
+                      raise SystemExit('Source-part checksum mismatch: ' + str(path))
+                  chunks.append(data)
+              data = b''.join(chunks)
+              if hashlib.sha256(data).hexdigest() != manifest['sha256']:
+                  raise SystemExit('Assembled source checksum mismatch')
+              target = Path('main.tex')
+              if target.exists() and target.read_bytes() != data:
+                  raise SystemExit('Refusing to replace a different manuscript')
+              target.write_bytes(data)
+              print('Original submission source verified:', manifest['sha256'])
+          PY
       - name: Check source availability
         id: source
         shell: bash
@@ -36,7 +64,7 @@ jobs:
         if: steps.source.outputs.present == 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install --no-install-recommends -y texlive-latex-base texlive-latex-recommended texlive-latex-extra lmodern
+          sudo apt-get install --no-install-recommends -y texlive-latex-base texlive-latex-recommended texlive-latex-extra lmodern poppler-utils
       - name: Compile the unchanged manuscript
         if: steps.source.outputs.present == 'true'
         shell: bash
@@ -54,6 +82,20 @@ jobs:
           mkdir -p verification
           sha256sum main.tex main.pdf > verification/github_build_sha256.txt
           pdflatex --version > verification/github_tex_version.txt
+          pdfinfo main.pdf > verification/github_pdf_info.txt
+          pdftotext -layout main.pdf verification/github_paper_text.txt
+      - name: Package the source and compiled article
+        if: steps.source.outputs.present == 'true'
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile
+          with zipfile.ZipFile('TCGS_Riemann_Hypothesis_Study_Overleaf.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
+              for pattern in ('*.tex', '*.pdf', '*.py', '*.json', 'requirements.txt', 'README.md', 'LICENSE'):
+                  for path in sorted(Path('.').glob(pattern)):
+                      archive.write(path, path.as_posix())
+          PY
       - name: Commit the compiled paper
         if: steps.source.outputs.present == 'true'
         shell: bash
@@ -61,9 +103,12 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add main.pdf verification/github_build_sha256.txt verification/github_tex_version.txt
+          git add main.tex main.pdf TCGS_Riemann_Hypothesis_Study_Overleaf.zip verification/github_build_sha256.txt verification/github_tex_version.txt verification/github_pdf_info.txt verification/github_paper_text.txt
+          if test -f .upload_source/ready.json; then
+            git rm -r .upload_source
+          fi
           if ! git diff --cached --quiet; then
-            git commit -m 'Build PDF from the final submission LaTeX source'
+            git commit -m 'Publish final submission source, compiled paper, and Overleaf bundle'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
