@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript when using this paper or its diagnostic code."
+type: article
+title: "Moment and Prime-Trace Criteria for the Riemann Hypothesis, with Two Spectral Exclusions"
+authors:
+  - family-names: "Arellano-Peña"
+    given-names: "Henry"
+    affiliation: "Nuevo Estandar Biotropical NEBIOT S.A.S., Bogotá, Colombia"
+version: "SUBMISSION_FINAL"
+date-released: 2026-09-06
+url: "https://github.com/hyrucanji77/TCGS_Riemann_Hypothesis_Study"
+repository-code: "https://github.com/hyrucanji77/TCGS_Riemann_Hypothesis_Study"
+license: CC-BY-4.0
+abstract: >-
+  Moment and prime-trace formulations of the Riemann hypothesis, spectral
+  exclusions including a constant-coefficient Morse family, and a separately
+  stated TCGS–SEQUENTION source-to-readout realization problem. The Riemann
+  hypothesis is not proved.
+keywords:
+  - Riemann hypothesis
+  - moment problem
+  - spectral geometry
+  - Fredholm determinants
+  - Morse potential
+  - TCGS-SEQUENTION
