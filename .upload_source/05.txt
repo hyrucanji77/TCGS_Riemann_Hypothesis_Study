@@ -1,0 +1,167 @@
+ C^{\mathrm{rec}}_r=d_{1,r}^{*}M_{2,\chi,r}d_{1,r},
+ \qquad a^{*}C^{\mathrm{rec}}_ra
+ =(d_{1,r}a)^{*}M_{2,\chi,r}(d_{1,r}a)\geq0.
+ \label{eq:cochainstiffness}
+\end{equation}
+Here the star on a coefficient matrix denotes conjugate transpose; it is not an undeclared metric adjoint. If $M_{1,r}>0$ is the one-cochain mass matrix, the Euclidean-normalized realization is $M_{1,r}^{-1/2}C^{\mathrm{rec}}_rM_{1,r}^{-1/2}$. Its null space, period constraints, and boundary conditions must be treated explicitly. Only independently established redundancies may be removed \cite{tcgsconservative,tcgsoperator}.
+
+Equation~\eqref{eq:cochainstiffness} is a positive sector, not a positivity theorem for the full coupled foam Hessian. The phase potential, field couplings, singular boundary term, and admissible variation space must all be included before a total second variation is assessed. Nonnegative energy values do not imply a nonnegative Hessian at every reference configuration. Moreover, an energy Hessian is distinct from the physical-readout derivative construction in Equation~\eqref{eq:observability} \cite{tcgsfoam,tcgsoperator}.
+
+\subsection{Positive boundary response by interior elimination}
+\label{subsec:schur}
+Suppose the declared quadratic realization at refinement $r$, after its stated constraints, is a Hermitian matrix $\mathsf C_r\geq0$. Partition its variables into interior and retained boundary/interface coefficients:
+\begin{equation}
+ \mathsf C_r=
+ \begin{pmatrix}C_{ii,r}&C_{ib,r}\\C_{bi,r}&C_{bb,r}\end{pmatrix},
+ \qquad C_{ii,r}>0,\quad C_{bi,r}=C_{ib,r}^{*}.
+ \label{eq:sourceblock}
+\end{equation}
+The boundary contribution in Equation~\eqref{eq:sharedboundaryvariation}, when constructed, belongs in this same quadratic assembly. It is not added independently after arithmetic comparison. The following result is standard Schur-complement algebra; its role is to identify a positivity-preserving reduction compatible with the declared source construction, not to claim a new matrix theorem. Graph-theoretic Kron reduction supplies a familiar realization of this mechanism \cite{kron}.
+
+\begin{proposition}[Positive interface reduction]
+\label{prop:schurpositive}
+For Equation~\eqref{eq:sourceblock}, define
+\begin{equation}
+ \mathsf S_r=C_{bb,r}-C_{bi,r}C_{ii,r}^{-1}C_{ib,r},
+ \qquad
+ \mathsf T_r b=\begin{pmatrix}-C_{ii,r}^{-1}C_{ib,r}b\\b\end{pmatrix}.
+ \label{eq:schurresponse}
+\end{equation}
+Then $\mathsf S_r=\mathsf T_r^{*}\mathsf C_r\mathsf T_r\geq0$, and
+\begin{equation}
+ b^{*}\mathsf S_rb
+ =\min_{a}\begin{pmatrix}a\\b\end{pmatrix}^{*}
+                  \mathsf C_r\begin{pmatrix}a\\b\end{pmatrix}.
+ \label{eq:schurminimum}
+\end{equation}
+If $\mathsf C_r>0$, then $\mathsf S_r>0$.
+\end{proposition}
+\begin{proof}
+Complete the square:
+\begin{align*}
+ \begin{pmatrix}a\\b\end{pmatrix}^{*}\mathsf C_r
+ \begin{pmatrix}a\\b\end{pmatrix}
+ &=\left(a+C_{ii,r}^{-1}C_{ib,r}b\right)^{*}C_{ii,r}
+   \left(a+C_{ii,r}^{-1}C_{ib,r}b\right)+b^{*}\mathsf S_rb.
+\end{align*}
+The first term has its unique minimum zero at the stated interior extension. Substitution gives both the minimum identity and the congruence. If the full matrix is positive definite, the extension of any nonzero $b$ is nonzero and has strictly positive quadratic value.
+\end{proof}
+
+With a declared positive boundary mass matrix $M_{b,r}$, put
+\begin{equation}
+ B_r=M_{b,r}^{-1/2}\mathsf S_rM_{b,r}^{-1/2},
+ \qquad K_r=B_r^{-1}
+ \label{eq:boundarycandidate}
+\end{equation}
+when $B_r>0$ on the declared retained space. At each finite refinement this is a positive trace-class candidate. A continuum trace-class limit, dimensional normalization, and arithmetic identity remain independent requirements. A zero eigenvalue may not be removed, shifted, or assigned a pseudoinverse solely to force agreement with $F$; any quotient, restriction, or shift changes the candidate and must be fixed by its source and readout definition.
+
+The inverse interior block in Equation~\eqref{eq:schurresponse} can generate a dense boundary response from a sparse local assembly. This supplies a calculable route to nonlocality rather than an independently fitted nonlocal kernel. The boundary is an auxiliary interface of the mathematical representation. It is not automatically the physical Shadow or a complete holographic encoding. The separate selector and physical-registration maps remain required \cite{tcgsconservative,tcgsfoundation}.
+
+\begin{proposition}[Selector covariance of the reduced candidate]
+\label{prop:schurcovariance}
+Suppose equivalent selectors transport Equation~\eqref{eq:sourceblock} by $U_i\oplus U_b$, with $U_i,U_b$ unitary, and transport the boundary mass by $M_b'=U_bM_bU_b^{*}$. Then
+\begin{equation}
+ \mathsf S'=U_b\mathsf S U_b^{*},\qquad
+ B'=U_bBU_b^{*},\qquad K'=U_bKU_b^{*}
+ \label{eq:schurnaturality}
+\end{equation}
+whenever the inverses exist. Their determinants and power traces agree.
+\end{proposition}
+\begin{proof}
+Insert the blockwise conjugation into Equation~\eqref{eq:schurresponse}; the interior unitaries cancel through $C_{ii}^{-1}$. Functional calculus transports the positive square root of $M_b$, and inversion gives the last relation. Trace and determinant are unitary invariants.
+\end{proof}
+
+The block-compatible transport is a hypothesis to be checked, not a property of arbitrary selector changes. In the continuum, one may instead define a boundary form by minimizing a source form over extensions with prescribed trace. A densely defined closed nonnegative boundary form has an associated positive self-adjoint operator; a strictly positive lower bound and a trace-class inverse require further estimates \cite{reed}. Neither closability nor spectral compactness is supplied by formal elimination alone.
+
+\subsection{Static response is not the complete bulk determinant}
+\label{subsec:spectralelimination}
+The arithmetic object must be fixed before a spectral comparison. A static response operator and a parameter-dependent elimination of the complete source problem are different objects. Let $\mathsf C_r>0$ and $\mathsf M_r>0$, and define the full spectral pencil $\mathsf P_r(w)=\mathsf C_r-w\mathsf M_r$. Wherever its interior block is invertible, write
+\begin{equation}
+ \mathsf S_r(w)=P_{bb,r}(w)
+ -P_{bi,r}(w)P_{ii,r}(w)^{-1}P_{ib,r}(w).
+ \label{eq:spectralschur}
+\end{equation}
+Block elimination gives the exact factorization
+\begin{equation}
+ \frac{\det(\mathsf C_r-w\mathsf M_r)}{\det\mathsf C_r}
+ =\frac{\det P_{ii,r}(w)}{\det C_{ii,r}}
+  \frac{\det\mathsf S_r(w)}{\det\mathsf S_r(0)}.
+ \label{eq:bulkboundarydeterminant}
+\end{equation}
+To verify it, left-multiply $\mathsf P_r(w)$ by the unit-determinant block triangular matrix that subtracts $P_{bi,r}(w)P_{ii,r}(w)^{-1}$ times its first block row from the second. The result is block triangular. Normalization uses the same calculation at $w=0$.
+
+The rational factors on the right of Equation~\eqref{eq:bulkboundarydeterminant} may have cancelling zeros and poles. The identity extends as the corresponding meromorphic identity; the product has the polynomial continuation on the left. Replacing the right side by $\det(\Id-wK_r)$ from the static boundary response generally discards both interior spectral data and the parameter dependence of $\mathsf S_r(w)$. A complete bulk determinant must retain these factors. A static boundary determinant is a legitimate \emph{different candidate}, but its equality to $F$ must be proved in its own right. Neither determinant is the Riemann function merely because it descends from a positive source quadratic form.
+
+\subsection{Alternative arithmetic completion routes}
+Theorems~\ref{thm:moment} and \ref{thm:primetrace} supply alternative conclusions of the construction. A positive trace-class realization of Equation~\eqref{eq:primebridge} already proves the determinant identity; no separate construction of $J_\sigma$ is then logically required for RH. Conversely, an all-degree positive representation of $q_\xi$ proves RH without first realizing the proposed boundary operator. Section~\ref{subsec:momentlimit} develops a finite-to-infinite version of the latter route. These alternatives retain the same missing requirement: exact agreement with the arithmetic target, rather than positivity of an unrelated model.
+
+\section{Spectral growth required by the arithmetic target}
+\label{sec:weyl}
+\subsection{Counting the squared ordinates}
+Suppose a positive determinant realization exists. Remove the kernel of $K$ and set $A=K^{-1}$ on its natural dense domain. Its eigenvalues are $\gamma_j^2$. The Riemann--von Mangoldt formula therefore requires
+\begin{align}
+ N_A(E)&=\#\{j:\gamma_j^2\leq E\}\notag\\
+ &=\frac{\sqrt E}{4\pi}\log E
+   -\frac{\log(2\pi)+1}{2\pi}\sqrt E+O(\log E).
+ \label{eq:requiredcount}
+\end{align}
+This follows by substituting $T=\sqrt E$ into
+$N(T)=\frac{T}{2\pi}\log\frac{T}{2\pi}-\frac{T}{2\pi}+O(\log T)$ \cite{titchmarsh}. Multiplicity is retained and only positive ordinates are counted. Doubling to include both signs would change every leading coefficient.
+
+\begin{proposition}[Compact-elliptic obstruction]
+\label{prop:weylobstruction}
+The full spectrum of a positive classical elliptic operator of fixed order $m>0$ on a smooth compact $d$-dimensional manifold, under the usual regular elliptic boundary conditions when a boundary is present, cannot equal the squared zeta ordinates in a positive determinant realization. The same conclusion holds after a fixed positive affine spectral rescaling or a perturbation affecting only finitely many eigenvalues.
+\end{proposition}
+\begin{proof}
+For this operator class the leading Weyl law is $N(E)\sim cE^{d/m}$, with $c>0$ determined by the principal symbol \cite{hormander}. Equation~\eqref{eq:requiredcount} instead has leading term $\frac1{4\pi}E^{1/2}\log E$. If $d/m\neq1/2$, the ratio of the two expressions tends to zero or infinity. If $d/m=1/2$, the logarithm still makes the ratio unbounded. An affine spectral rescaling changes coefficients but not this distinction, and finitely many eigenvalue changes alter $N(E)$ by $O(1)$.
+\end{proof}
+
+For a four-dimensional regular source chart, choosing order eight would match the power $E^{1/2}$ but not the logarithm. For a three-dimensional regular Shadow chart, order six has the same limitation. This is a restriction on an entire-spectrum realization in a specified operator class, not a dimensional refutation of Counterspace. Singular strata, noncompact corridors, nonlocal operators, logarithmic symbols, or independently selected infinite-dimensional subspaces fall outside the stated proposition. Each alternative requires its own counting theorem; the existence of singular source structure alone does not supply the required coefficient \cite{tcgsgeometry}.
+
+\subsection{The heat-trace fingerprint}
+The counting law determines an additional useful target. Here $\tau>0$ is an analytical heat parameter, not the operational clock of Equation~\eqref{eq:time}.
+
+\begin{proposition}[Required heat asymptotics]
+\label{prop:heat}
+Any positive determinant realization has
+\begin{equation}
+ \Tr\e^{-\tau A}
+ =\frac{\log(1/\tau)-\gamma_{\mathrm E}-2\log(4\pi)}
+        {8\sqrt{\pi\tau}}
+   +O\!\left(\log(1/\tau)\right)
+ \quad(\tau\downarrow0),
+ \label{eq:heat}
+\end{equation}
+where $\gamma_{\mathrm E}$ is Euler's constant.
+\end{proposition}
+\begin{proof}
+Integration by parts gives
+\[
+ \Tr\e^{-\tau A}=\tau\int_0^\infty\e^{-\tau E}N_A(E)\dd E.
+\]
+Insert Equation~\eqref{eq:requiredcount}. With $v=\tau E$, the first two terms use $\Gamma(3/2)=\sqrt\pi/2$ and
+$\Gamma'(3/2)/\Gamma(3/2)=2-\gamma_{\mathrm E}-2\log2$. Their coefficients simplify to Equation~\eqref{eq:heat}. Integrating the $O(\log E)$ remainder gives $O(\log(1/\tau))$; the bounded low-energy interval contributes only a bounded error.
+\end{proof}
+
+The leading logarithmic heat term is a stringent geometric requirement. It distinguishes the arithmetic target from an ordinary compact-manifold heat expansion even before individual eigenvalues are compared. It remains only a necessary condition: the exponential model below has the same first two counting terms and therefore the same displayed heat terms without having the correct determinant.
+
+There is also a trace-ideal consequence. Inverting the leading zero-counting relation gives $\gamma_j\sim2\pi j/\log j$. Thus
+\begin{equation}
+ \lambda_j(K)\sim\left(\frac{\log j}{2\pi j}\right)^2,
+ \qquad \Tr K^q<\infty\ \Longleftrightarrow\ q>\frac12.
+ \label{eq:schatten}
+\end{equation}
+The borderline series at $q=1/2$ behaves like $\sum(\log j)/j$ and diverges. This calculation specifies how much compactness the arithmetic realization needs, rather than treating trace-class membership as an unspecified technical assumption.
+
+\subsection{A smooth boundary response does not evade the obstruction}
+\label{subsec:boundaryweyl}
+Nonlocality by itself does not imply an anomalous leading counting law. For a smooth compact boundary, the usual Dirichlet-to-Neumann operator is a classical elliptic pseudodifferential operator of order one, and its spectrum is the Steklov spectrum \cite{steklov}. Its boundary dimension, operator order, and mass measure therefore remain decisive.
+
+\begin{proposition}[Regular boundary-power obstruction]
+\label{prop:boundarypower}
+Let $B$ be such a positive boundary operator on a compact three-dimensional boundary, restricted off a finite-dimensional kernel when necessary, with eigenvalues $b_j\sim c j^{1/3}$, $c>0$. For any fixed $\alpha>0$, $B^{-\alpha}$ is trace class exactly when $\alpha>3$. No positive affine rescaling of $B^\alpha$ has the full counting law in Equation~\eqref{eq:requiredcount}.
+\end{proposition}
+\begin{proof}
+The inverse-power series is comparable to $\sum_j j^{-\alpha/3}$, giving the trace-class condition. The counting function of $B^\alpha$ is asymptotic to a positive constant times $E^{3/\alpha}$. At $\alpha=6$ its power matches $E^{1/2}$ but the logarithm is absent; other powers fail already at the exponent. A positive affine rescaling does not change either conclusion.
+\end{proof}
+
