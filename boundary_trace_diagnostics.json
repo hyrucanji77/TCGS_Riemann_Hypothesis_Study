@@ -1,0 +1,74 @@
+{
+  "status": "exact rational manufactured algebra checks; not an RH proof",
+  "python_version": "3.13.5",
+  "arithmetic": "fractions.Fraction",
+  "source_geometry_realized": false,
+  "uses_zeta_zeros": false,
+  "checks": {
+    "schur_response": true,
+    "minimizing_extension": true,
+    "positive_leading_minors": true,
+    "inverse_normalization": true,
+    "finite_power_traces": true,
+    "rank_two_hankel_termination": true,
+    "spectral_factorization_-3": true,
+    "full_characteristic_polynomial_-3": true,
+    "boundary_characteristic_polynomial_-3": true,
+    "spectral_factorization_-1/2": true,
+    "full_characteristic_polynomial_-1/2": true,
+    "boundary_characteristic_polynomial_-1/2": true,
+    "spectral_factorization_0": true,
+    "full_characteristic_polynomial_0": true,
+    "boundary_characteristic_polynomial_0": true,
+    "spectral_factorization_1/3": true,
+    "full_characteristic_polynomial_1/3": true,
+    "boundary_characteristic_polynomial_1/3": true,
+    "spectral_factorization_3": true,
+    "full_characteristic_polynomial_3": true,
+    "boundary_characteristic_polynomial_3": true,
+    "noncommuting_control": true,
+    "resolvent_identity_1": true,
+    "rational_trace_upper_bound_1": true,
+    "resolvent_identity_3/2": true,
+    "rational_trace_upper_bound_3/2": true,
+    "resolvent_identity_4": true,
+    "rational_trace_upper_bound_4": true
+  },
+  "number_of_checks": 28,
+  "schur_response": [
+    [
+      "3/2",
+      "-1/2"
+    ],
+    [
+      "-1/2",
+      "3/2"
+    ]
+  ],
+  "inverse": [
+    [
+      "3/4",
+      "1/4"
+    ],
+    [
+      "1/4",
+      "3/4"
+    ]
+  ],
+  "moments": [
+    "3/2",
+    "5/4",
+    "9/8",
+    "17/16",
+    "33/32",
+    "65/64",
+    "129/128",
+    "257/256",
+    "513/512"
+  ],
+  "hankel_determinants": [
+    "3/2",
+    "1/8",
+    "0"
+  ]
+}
