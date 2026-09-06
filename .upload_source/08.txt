@@ -1,0 +1,210 @@
+                    \Gamma(\mu)(x/4)^{-\mu}\mu^\kappa.
+ \label{eq:whittakerleadingfactor}
+\end{equation}
+Appendix~\ref{subsec:secondorderwhittaker} proves the locally $x$-uniform expansion, including its first $x$-derivative,
+\begin{align}
+ \log\frac{W_{\kappa,\mu}(x)}{L_{\kappa,\mu}(x)}
+ &=\frac{c(\kappa,x)}{\mu}+\frac{c_2(\kappa,x)}{\mu^2}
+   +O(\mu^{-3}),\notag\\
+ c_2(\kappa,x)&=-\frac{\kappa^3}{6}+\frac{\kappa}{24}
+                  +\frac{\kappa x}{4}-\frac{x^2}{16},
+ \label{eq:whittakerlogsecond}
+\end{align}
+with $c(\kappa,x)$ as in Equation~\eqref{eq:whittakercoefficient}. In particular,
+\begin{equation}
+ \frac{\partial_xW_{\kappa,\mu}(x)}{W_{\kappa,\mu}(x)}
+ =-\frac\mu x+\frac1{2x}
+   +\frac{\kappa/2-x/8}{\mu}
+   +\frac{\kappa/4-x/8}{\mu^2}+O(\mu^{-3}).
+ \label{eq:whittakerlogderivative}
+\end{equation}
+This gives
+\begin{equation}
+ \frac{Q_{\kappa,h,\mu}(x)}{-2\mu W_{\kappa,\mu}(x)}
+ =1+\frac{h}{2\mu}
+     -\frac{\kappa x/2-x^2/8}{\mu^2}+O(\mu^{-3}).
+ \label{eq:robinprefactor}
+\end{equation}
+The target, in the same order variable, satisfies
+\begin{equation}
+ \log\frac{\xi(2\mu+1/2)}
+ {2\pi^{-1/4}\Gamma(\mu)\pi^{-\mu}\mu^{9/4}}
+ =-\frac3{32\mu}-\frac9{128\mu^2}+O(\mu^{-3}).
+ \label{eq:xilogsecond}
+\end{equation}
+Thus the finite Robin parameter can cancel the first inverse-order mismatch after the power has been matched. It cannot be omitted from the comparison.
+
+\begin{theorem}[Constant Robin and spectral-shift exclusion]
+\label{thm:robinmorseexclusion}
+No strictly positive realization of Equation~\eqref{eq:shiftedmorsedifferential} with real constant Robin condition $f'(u_0)=hf(u_0)$ has normalized inverse determinant $F$. This holds for every $c>0$ and fixed real $\kappa,u_0,h,\lambda$, with the kinetic coefficient and exponential rate displayed in that equation.
+\end{theorem}
+\begin{proof}
+For $\lambda=0$, write $D_R(w)=\mathcal H_R(w)/\mathcal H_R(0)$ in the positive realization. Equations~\eqref{eq:whittakerlogsecond}--\eqref{eq:xilogsecond} give the full real-axis comparison
+\begin{align}
+ \log\frac{F(-4\mu^2)}{D_R(-4\mu^2)}
+ &=\log C_R+\mu\log\frac{x}{4\pi}
+       +(5/4-\kappa)\log\mu\notag\\
+ &\quad+\frac{\delta_\kappa(x)-h/2}{\mu}
+       +\frac{b_{\kappa,h}(x)}{\mu^2}+O(\mu^{-3}),
+ \label{eq:robinlogratio}\\
+ C_R&=-\frac{2\pi^{1/4}Q_{\kappa,h,0}(x)}{\sqrt x\,\xi(1/2)}>0,\notag\\
+ b_{\kappa,h}(x)&=-\frac9{128}+\frac{\kappa^3}{6}-\frac{\kappa}{24}
+                  +\frac{\kappa x}{4}-\frac{x^2}{16}+\frac{h^2}{8}.
+ \label{eq:robinsecondcoefficient}
+\end{align}
+For a nonzero shift, the denominator is $\mathcal H_R(-\lambda)$ and the order is $\mu_\lambda$ from Equation~\eqref{eq:shiftedorder}. The extra order factor in Equation~\eqref{eq:robinprefactor} only changes $\kappa$ to $\kappa+1$ in the algebraic prefactor of Equation~\eqref{eq:shiftlogterm}; it does not change its logarithmic $1/\mu$ term. Consequently an identity first forces $x=4\pi$ and $\kappa=5/4$, then the leading normalization, and then $\lambda=0$ from the coefficient of $(\log\mu)/\mu$. This argument uses the shifted normalization even when the unshifted operator is not invertible.
+
+We may therefore use Equation~\eqref{eq:robinlogratio}. Its $1/\mu$ coefficient forces
+\begin{equation}
+ h=h_*:=2\delta_{5/4}(4\pi)
+       =2\pi^2-5\pi+\frac{11}{8}.
+ \label{eq:matchedrobinh}
+\end{equation}
+Even granting $C_R=1$, the remaining $1/\mu^2$ coefficient is
+\begin{align}
+ B_*&:=b_{5/4,h_*}(4\pi)
+     =\frac{13}{64}+\frac{5\pi}{4}-\pi^2+\frac{h_*^2}{8}\notag\\
+ &=\frac{x^4-20x^3+90x^2-60x+225}{512}\bigg|_{x=4\pi}<0.
+ \label{eq:robinanalyticobstruction}
+\end{align}
+For an explicit rational sign bound, $157/50<\pi<22/7$ and monotonicity of $2p^2-5p+11/8$ on that interval give
+\begin{equation}
+ B_*<\frac{13}{64}+\frac54\frac{22}{7}
+           -\left(\frac{157}{50}\right)^2
+           +\frac18\left(\frac{2123}{392}\right)^2
+      =-\frac{1583907247}{768320000}<0.
+ \label{eq:robinrationalbound}
+\end{equation}
+Thus the logarithm cannot vanish identically. No numerical Whittaker evaluation is a premise of the exclusion.
+\end{proof}
+
+The parameter tuple that survives the earlier filters is genuinely admissible, rather than excluded by a hidden positivity failure. Under the stated \emph{left-endpoint} convention $f'(u_0)=hf(u_0)$, the quadratic form is
+\begin{equation}
+ a_h[f]=\int_{u_0}^{\infty}\bigl(|f'|^2+V|f|^2\bigr)\dd u
+                   +h|f(u_0)|^2.
+ \label{eq:robinboundaryform}
+\end{equation}
+At $x=4\pi$, $\kappa=5/4$, and $h=h_*>0$, the potential satisfies
+$V\geq16\pi(\pi-5/4)>0$ and the boundary term is nonnegative. Hence no adverse trace-inequality penalty is needed for this convention. Numerically $h_*\approx5.4062455342$ and $B_*\approx-2.0860522371$; Section~\ref{subsec:robindiagnostics} reports an independent normalization diagnostic. The failure is an exact second-order arithmetic mismatch after positivity, counting, scale, power, shift, and first-order matching have all survived.
+
+Together, Corollary~\ref{cor:shiftedmorseexclusion} and Theorem~\ref{thm:robinmorseexclusion} cover every real constant separated self-adjoint left-endpoint condition for this Morse differential expression, including Neumann data as $h=0$. The right endpoint is limit point. The extension to a positive kinetic coefficient and a common exponential rate is proved in Section~\ref{subsec:kineticrate}; they do not leave a free spectral repair once the leading count is matched. Energy-dependent boundary data, additional potential terms, mode deletion, and a changed ratio of exponential rates remain outside this Morse-family exclusion.
+
+\subsection{Kinetic--rate normalization of the full Morse family}
+\label{subsec:kineticrate}
+A positive kinetic coefficient and the common exponential rate do not leave an additional repair parameter when the ratio of the two rates remains $2:1$. Consider the full differential expression
+\begin{equation}
+ \mathcal A=-a\frac{\dd^2}{\dd u^2}
+          +c^2\e^{2\beta u}-4c\kappa\e^{\beta u}+\lambda,
+ \qquad u\geq u_0,\qquad a,c,\beta>0,
+ \quad \kappa,u_0,\lambda\in\R.
+ \label{eq:generalkineticmorse}
+\end{equation}
+The coordinate dilation and its unitary normalization are
+\begin{equation}
+ v=\frac{u}{\sqrt a},\qquad
+ (\mathcal U_a f)(v)=a^{1/4}f(\sqrt a\,v),\qquad
+ b:=\beta\sqrt a,\qquad x:=c\e^{\beta u_0}.
+ \label{eq:kineticunitary}
+\end{equation}
+Here $\mathcal U_a:L^2([u_0,\infty),\dd u)\to
+L^2([u_0/\sqrt a,\infty),\dd v)$ is unitary; no eigenvalue rescaling has been made in this first step.
+
+\begin{corollary}[Full kinetic--rate Morse exclusion]
+\label{cor:kineticratemorseexclusion}
+No strictly positive realization of Equation~\eqref{eq:generalkineticmorse}, with a fixed real separated self-adjoint left-endpoint condition, has
+$\det(\Id-w\mathcal A^{-1})=F(w)$. This includes arbitrary positive kinetic coefficient, common rate, potential scale, endpoint, real $\kappa$, constant spectral shift, and real constant Robin parameter.
+\end{corollary}
+\begin{proof}
+Conjugation by $\mathcal U_a$ makes the kinetic coefficient one and replaces $\beta$ by $b$. A second change $r=bv+\log(2c/b)$, with unitary factor $b^{-1/2}$, gives
+\begin{equation}
+ \mathcal A\simeq b^2\left(-\frac{\dd^2}{\dd r^2}
+             +\frac14\e^{2r}-\frac{2\kappa}{b}\e^r\right)+\lambda,
+ \qquad r\geq r_0:=\log\frac{2x}{b}.
+ \label{eq:generalmorsereduction}
+\end{equation}
+The first and second changes preserve the class of real constant separated boundary conditions. Apply the Morse counting law \cite[Theorem~3.2]{lagarias} with its parameter $k=-2\kappa/b$ and energy $(E-\lambda)/b^2$. For each fixed parameter tuple,
+\begin{equation}
+ N_{\mathcal A}(E)=\frac{\sqrt E}{b\pi}
+       \left[\log\sqrt E+\log\frac2x-1\right]+O(1).
+ \label{eq:kineticratecount}
+\end{equation}
+The fixed shift changes the displayed smooth terms only by $O(E^{-1/2}\log E)$, absorbed in this bounded remainder. The count also implies $\mathcal A^{-1}$ is trace class in the strictly positive case.
+
+If its determinant were $F$, its complete eigenvalue count would satisfy Equation~\eqref{eq:requiredcount}. The two leading coefficients therefore force, successively,
+\begin{equation}
+ \frac{1}{2b\pi}=\frac{1}{4\pi},\qquad
+ b=\beta\sqrt a=2,\qquad x=c\e^{\beta u_0}=4\pi.
+ \label{eq:kineticratecalibration}
+\end{equation}
+When $b=2$, the first conjugated expression is exactly Equation~\eqref{eq:shiftedmorsedifferential} on $v\geq u_0/\sqrt a$. Dirichlet data stay Dirichlet, while $f'(u_0)=hf(u_0)$ becomes
+\begin{equation}
+ (\mathcal U_af)'(u_0/\sqrt a)
+ =h_{\mathrm{red}}(\mathcal U_af)(u_0/\sqrt a),
+ \qquad h_{\mathrm{red}}=\sqrt a\,h.
+ \label{eq:kineticrobintransport}
+\end{equation}
+Corollary~\ref{cor:shiftedmorseexclusion} and Theorem~\ref{thm:robinmorseexclusion} now exclude every such normalized candidate. Unitary equivalence preserves the determinant, completing the proof.
+\end{proof}
+
+The first counting term fixes the product $\beta\sqrt a$, not $a$ and $\beta$ separately. The residual freedom with that product fixed is a coordinate dilation, not an untested spectral adjustment. In the Robin branch the last first-order match would read $\sqrt a\,h=h_*$; its second-order residual is still $B_*\neq0$. The remaining exclusions of scope are changes of the $2:1$ rate ratio, additional potential terms, mode deletion, and energy-dependent boundary data. These are different spectral families, not free parameters of Equation~\eqref{eq:generalkineticmorse}.
+
+\section{Finite positivity does not close the infinite problem}
+\label{sec:finite}
+A finite matrix calculation can disprove a proposed positive representation if it produces a rigorously negative quadratic value. A positive calculation in finitely many degrees has a different logical status. The following construction makes the distinction explicit, including the possibility of off-line zeros arbitrarily far above the tested regime.
+
+\begin{theorem}[Finite-tower nonclosure]
+\label{thm:finite}
+For every integer $q\geq0$ and every $0<\eta<1/2$, there exists a real entire function $G$ of order $1/2$ with $G(0)=1$ and $G(-x)>0$ for $x\geq0$, such that its logarithmic-moment matrices are positive definite for $0\leq N\leq q$, while $G$ has nonreal zeros. The associated even function $G(z^2)$ can have all its zeros in $|\Im z|<1/2$. The construction can also preserve the first two zeta counting terms.
+\end{theorem}
+\begin{proof}
+Start with
+\begin{equation}
+ G_0(w)=\frac{\sin(\pi\sqrt w)}{\pi\sqrt w}
+       =\prod_{n=1}^{\infty}(1-w/n^2).
+ \label{eq:sinebase}
+\end{equation}
+Its logarithmic moments are $m_k^{(0)}=\zeta(2k+2)$, represented by the positive measure $\sum_{n\geq1}n^{-2}\delta_{n^{-2}}$. Every finite Hankel matrix is therefore positive definite by the infinite-support argument in Theorem~\ref{thm:moment}.
+
+For $T>0$, put $a_T=(T+i\eta)^2$ and define
+\begin{equation}
+ G_T(w)=G_0(w)(1-w/a_T)(1-w/\overline{a_T}).
+ \label{eq:finiteperturb}
+\end{equation}
+It has nonreal zeros $a_T,\overline{a_T}$, remains real entire of order $1/2$, and satisfies
+$G_T(-x)=G_0(-x)|1+x/a_T|^2>0$. Its logarithmic moments are
+\begin{equation}
+ m_k^{(T)}=m_k^{(0)}+2\Re(a_T^{-k-1}).
+ \label{eq:momentperturb}
+\end{equation}
+For $|a_T|\geq1$, the perturbation of the $(q+1)\times(q+1)$ Hankel matrix has operator norm at most $2(q+1)/|a_T|$. Choose $T$ large enough that this is less than the smallest eigenvalue of $H_q^{(0)}$. The perturbed $H_q$ remains positive definite, as do all its leading principal submatrices. The extra zeros of $G_T(z^2)$ are $\pm(T+i\eta)$ and $\pm(T-i\eta)$; all other zeros are real.
+
+For the final assertion, replace $G_0$ by $D_{\mathrm{exp}}$. Its positive trace-class realization gives strictly positive finite moment matrices in exactly the same way. Multiplication by the same two factors adds only a fixed finite quartet in the $z$-plane and does not change either leading counting coefficient in Equation~\eqref{eq:expcount}.
+\end{proof}
+
+This theorem does not alter $F$ and does not construct an arithmetic counterexample. In particular, $G_T$ is not claimed to have the Euler product of $\zeta$. It shows why a proof of the specific arithmetic identity cannot be replaced by a finite list of matrix signs, strip symmetry, real-axis positivity, and two counting terms. Those properties coexist in the construction with nonreal zeros.
+
+The theorem also does not exclude finite computation from a proof accompanied by an independent global estimate. A rigorously justified bound reducing the entire problem to a finite verification would be additional mathematical information. What fails is the unqualified inference from a finite positive prefix to positivity at every degree.
+
+\subsection{Finite-to-infinite arithmetic moment transfer}
+\label{subsec:momentlimit}
+The finite-rank obstruction concerns one fixed representation, not a refinement family. A sequence can increase its rank while every individual member remains finite. The following consequence of Theorem~\ref{thm:moment} makes the required limiting statement explicit; it is a positivity-transfer result, not an independent proof of the arithmetic limit.
+
+\begin{theorem}[Finite positive trace-moment transfer]
+\label{thm:finitemomenttransfer}
+RH is equivalent to the existence of positive finite-dimensional matrices $K_r$ such that, for every fixed $n\geq0$,
+\begin{equation}
+ \lim_{r\to\infty}\Tr K_r^{n+1}=m_n.
+ \label{eq:finitemomentlimit}
+\end{equation}
+The matrices need not act on the same finite-dimensional space. No assumption of convergence uniform in $n$ is required.
+\end{theorem}
+\begin{proof}
+For a fixed polynomial $p(t)=\sum_{j=0}^{N}c_jt^j$, positivity and finite-dimensional spectral calculus give
+\begin{equation}
+ \sum_{i,j=0}^{N}\overline{c_i}c_j\Tr K_r^{i+j+1}
+ =\Tr\bigl(K_r p(K_r)^{*}p(K_r)\bigr)\geq0.
+ \label{eq:finitetracegram}
+\end{equation}
+There are only finitely many terms for this $p$. Equation~\eqref{eq:finitemomentlimit} therefore gives $q_\xi(p)\geq0$. Since $p$ was arbitrary, Theorem~\ref{thm:moment} proves RH. Conversely, under RH the finite diagonal matrices with entries $\gamma_1^{-2},\ldots,\gamma_r^{-2}$ satisfy Equation~\eqref{eq:finitemomentlimit} by absolute convergence of Equation~\eqref{eq:powersums}. This conditional construction proves the equivalence; it is not an independent source construction.
+\end{proof}
+
