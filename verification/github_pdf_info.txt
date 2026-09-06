@@ -1,0 +1,22 @@
+Title:           Moment and Prime-Trace Criteria for the Riemann Hypothesis, with Two Spectral Exclusions
+Subject:         Moment and trace criteria, spectral exclusions, and a TCGS-SEQUENTION realization problem
+Keywords:        
+Author:          Henry Arellano-Peña
+Creator:         LaTeX with hyperref
+Producer:        pdfTeX-1.40.25
+CreationDate:    Sun Sep  6 23:21:48 2026 UTC
+ModDate:         Sun Sep  6 23:21:48 2026 UTC
+Custom Metadata: yes
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           54
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       742986 bytes
+Optimized:       no
+PDF version:     1.5

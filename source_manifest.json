@@ -1,0 +1,160 @@
+{
+  "release": "SUBMISSION_FINAL",
+  "repository_delivery": "paper, code, reference outputs, and GitHub build records",
+  "main_document": "main.tex",
+  "pdf_provenance": "Compiled on GitHub from main.tex; not a byte-identical upload of a prior PDF.",
+  "mathematical_status": "RH is not proved; the source-derived arithmetic identity remains unconstructed.",
+  "excluded_material": "Historical drafts, private editorial correspondence, source-document PDF archive, and generated infographic are not included.",
+  "files": [
+    {
+      "path": "CITATION.cff",
+      "bytes": 994,
+      "sha256": "794af27aa3fd07bce6548dd0505a94124b8b7775e387271eb07b65fc7740d3bd"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 624,
+      "sha256": "4f2e1bc720ff654ce91e5531e39d3a3849a1c35c1427af62b2008625bad52d90"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5308,
+      "sha256": "0dff3074685ddf55c4b4ffd2831eecc5edead5f618448fbf43f293e7835ddfd2"
+    },
+    {
+      "path": "boundary_trace_diagnostics.json",
+      "bytes": 1814,
+      "sha256": "d303f727bba603c4a89512bd2d910632411ada19c07d305c6d4a3d8e4b89ac12"
+    },
+    {
+      "path": "boundary_trace_diagnostics.py",
+      "bytes": 6253,
+      "sha256": "d857d0c5a9f4bf388eda13263b87d4f48b75e168fd0b52de1e8792008cef8bee"
+    },
+    {
+      "path": "completed_tower_diagnostics.py",
+      "bytes": 3427,
+      "sha256": "e6105a0d540a97352a26ca41a42ac4950d1907b382c2390742d49ce1d4bb3aa0"
+    },
+    {
+      "path": "completed_tower_diagnostics_40.json",
+      "bytes": 2863,
+      "sha256": "9b09a1824fd79e4dbaa4b8d8480711916909d4a02afdfc398d71c79d51b4a42c"
+    },
+    {
+      "path": "completed_tower_diagnostics_60.json",
+      "bytes": 3557,
+      "sha256": "97a24b8647a114b75f81ef61d9b513d5f0025be4ddc57ac95c1fca3792d406e1"
+    },
+    {
+      "path": "diagnostics.py",
+      "bytes": 2824,
+      "sha256": "95e8e87f08fee5cfd2865141313d8b2958e7aff6a9cee91766a04e1736388e52"
+    },
+    {
+      "path": "diagnostics_40.json",
+      "bytes": 1240,
+      "sha256": "a5aaf30f56e21e26e33db33111ffd01fac1c2c8697ad774254eb82468fc7c0ac"
+    },
+    {
+      "path": "diagnostics_60.json",
+      "bytes": 1623,
+      "sha256": "2018cd51a3b629ea8857b92455a9291336094da2b03087d1af37c9b05a1f8fb0"
+    },
+    {
+      "path": "kinetic_rate_diagnostics.json",
+      "bytes": 1252,
+      "sha256": "845a296b66fe0d99b15e997638267f4548cef68bb6e6356c3d349960f363479d"
+    },
+    {
+      "path": "kinetic_rate_diagnostics.py",
+      "bytes": 3411,
+      "sha256": "736a7ebf50fb59282fac36bae51353d0ccc770d7caea0b0826866fa18f47585e"
+    },
+    {
+      "path": "main.pdf",
+      "bytes": 742986,
+      "sha256": "b65e24318d3a618aea7569ffa1800869361173c1f2003cf938c75679739d30af"
+    },
+    {
+      "path": "main.tex",
+      "bytes": 182658,
+      "sha256": "ac81d0f3aaa5cbe1df54108a6165efcee2e29885637b9c21aa32d6dbbb490df6"
+    },
+    {
+      "path": "morse_diagnostics.json",
+      "bytes": 1173,
+      "sha256": "6f9e1ce316b467ecdff12e289209a0268b3e43ac849fcfb52cbd4dbd9981b698"
+    },
+    {
+      "path": "morse_diagnostics.py",
+      "bytes": 2302,
+      "sha256": "f5ced0734800b76950a968f08036fcf4610612134c4f971caef9800516256da3"
+    },
+    {
+      "path": "preservation_report.json",
+      "bytes": 1676,
+      "sha256": "85ee7bbdb3f2b0e28f6619ccf3220751ab6bd3b02c7b93e13e653b5abd5f17ec"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 14,
+      "sha256": "a699f46ed76bd216f1081b6b2330e4fb45d7c8c5a5354b208694d6590a5a8645"
+    },
+    {
+      "path": "robin_shift_diagnostics.py",
+      "bytes": 7173,
+      "sha256": "49410297575a79b52f383e9827112c7350f9c7e12703600857fdba3e2b82a6a6"
+    },
+    {
+      "path": "robin_shift_diagnostics_60.json",
+      "bytes": 3878,
+      "sha256": "e1543912c7090e802d5411366ca3e3d8ec2215fbcf852f7c5a58f0d865b07a7b"
+    },
+    {
+      "path": "robin_shift_diagnostics_80.json",
+      "bytes": 4261,
+      "sha256": "679f43783c8a777662f18d9699718a8e5c33a4db4fb11e3924ffd079f4b2c7e8"
+    },
+    {
+      "path": "scale_endpoint_diagnostics.json",
+      "bytes": 3664,
+      "sha256": "f84b5b8192544295a31fc6d1cb4dbe4e3d1ce62d2868dca58f8be62645d5edb0"
+    },
+    {
+      "path": "scale_endpoint_diagnostics.py",
+      "bytes": 4875,
+      "sha256": "d1211bcb2dac62735decb222b71c9a073b0e54a96f5294694f2fab32546122de"
+    },
+    {
+      "path": "sesquilinear_diagnostics.json",
+      "bytes": 3432,
+      "sha256": "e27a64905be1b007054715c8f7d3af028059e57d39bc3ff42c57585e02ff6dc5"
+    },
+    {
+      "path": "sesquilinear_diagnostics.py",
+      "bytes": 5137,
+      "sha256": "3c5f91ef1fa80c14a5d4045522392f9c8b1017274ffc693834818efa1ca87e15"
+    },
+    {
+      "path": "shifted_tower_diagnostics.py",
+      "bytes": 3536,
+      "sha256": "412481f1fab8025e49f98a6eeaf5983dace678a847e4e1f41b77f2f7a79c728f"
+    },
+    {
+      "path": "shifted_tower_diagnostics_40.json",
+      "bytes": 2436,
+      "sha256": "0681233b8febd5512240c0bdd87862e626b2dd9bdff3f358d7b350f93300bd60"
+    },
+    {
+      "path": "shifted_tower_diagnostics_60.json",
+      "bytes": 3041,
+      "sha256": "e55dc3f513a70e847d55e05cfcd690a083b465472c841fc65c6c971bba0406db"
+    },
+    {
+      "path": "verify_release.py",
+      "bytes": 11332,
+      "sha256": "2d9491bcf6322699a05ff1b664f59da29d292799575fa479421f7dcd0bc3f2ec"
+    }
+  ]
+}
