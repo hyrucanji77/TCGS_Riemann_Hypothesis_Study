@@ -1,0 +1,59 @@
+{
+  "source": "main.tex from TCGS_Riemann_Overleaf_SUBMISSION_FINAL.zip",
+  "bytes": 182658,
+  "sha256": "ac81d0f3aaa5cbe1df54108a6165efcee2e29885637b9c21aa32d6dbbb490df6",
+  "parts": [
+    {
+      "path": ".upload_source/01.txt",
+      "sha256": "371a56c89b0ba3837be2b3b56449f5f2d27f71985e37c18a4d6cf5a20bd3a215"
+    },
+    {
+      "path": ".upload_source/02.txt",
+      "sha256": "304f3600b837751d1f289804a4be7405ae6cddac159d965eab4104b8b22c8e43"
+    },
+    {
+      "path": ".upload_source/03.txt",
+      "sha256": "55fb031d2ac56f57a26132771710f706a0c551e206f886eec0a6dcb6415e3d9c"
+    },
+    {
+      "path": ".upload_source/04.txt",
+      "sha256": "c39c4a9ea0aa804d247049c0e55a4fa2a9ecc7cf223a1a1a1746bf131cf2c5fe"
+    },
+    {
+      "path": ".upload_source/05.txt",
+      "sha256": "5b8e10026bf4e0b7150f5cd3e9b8e6b42fb938b3799144939df77e3d2a6e53b9"
+    },
+    {
+      "path": ".upload_source/06.txt",
+      "sha256": "37923973dbd39fe2187e21b0b2d302a22a90efbfae200f40828194cb0d0b2b26"
+    },
+    {
+      "path": ".upload_source/07.txt",
+      "sha256": "6c743dc657d2431f8ac291a4a07bd593a3d1b9cbb6f5e3d9fb9d50dd3d2d2a5b"
+    },
+    {
+      "path": ".upload_source/08.txt",
+      "sha256": "8a2bb1f1a77cc4d5d48fcb3e71d4b2d5854b9c9a4c6302e0db5d7d6f1c7a8e93"
+    },
+    {
+      "path": ".upload_source/09.txt",
+      "sha256": "e5dd7a8a1c2c0c7c49de37b166b3b728fe2a4ee28fef0cb41b1e9dc5c5e31c2e"
+    },
+    {
+      "path": ".upload_source/10.txt",
+      "sha256": "fd8c1a6a0e969ad9f0a9c0c28bc28447bdf2e19af956e5a6345f407b145a2c70"
+    },
+    {
+      "path": ".upload_source/11.txt",
+      "sha256": "4d768a239b87b1d28e24d08e0366d89f2e2c7b64b41cb172dd75ed3f9b495c23"
+    },
+    {
+      "path": ".upload_source/12.txt",
+      "sha256": "4e5134f969f4891c27d7e4c98a3f65f2ebd6d7b10d68b7ed80b181cd956c2fde"
+    },
+    {
+      "path": ".upload_source/13.txt",
+      "sha256": "7d67be4d34cf247e9e6c415f85ae365f853876731892e658ed1c718a1c172a8c"
+    }
+  ]
+}
