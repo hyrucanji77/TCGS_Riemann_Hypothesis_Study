@@ -1,0 +1,83 @@
+name: Package verified paper release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'CITATION.cff'
+      - 'README.md'
+      - 'LICENSE'
+      - '.github/workflows/package-release.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: manuscript-pdf
+  cancel-in-progress: false
+
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out the latest completed build
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Verify source integrity and refresh the download bundle
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json, zipfile
+          def sha(path):
+              return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+          report = json.loads(Path('verification/github_diagnostics_report.json').read_text())
+          if report['status'] != 'PASS' or sha('main.tex') != report['manuscript_sha256']:
+              raise SystemExit('A matching successful manuscript verification is required.')
+          for path, expected in report['source_script_hashes'].items():
+              if sha(path) != expected:
+                  raise SystemExit('Diagnostic source changed since verification: ' + path)
+          for row in report['jobs']:
+              if sha(row['output']) != row['expected_sha256']:
+                  raise SystemExit('Reference output changed since verification: ' + row['output'])
+          for line in Path('verification/github_build_sha256.txt').read_text().splitlines():
+              expected, path = line.split(maxsplit=1)
+              if sha(path.strip()) != expected:
+                  raise SystemExit('Paper build checksum mismatch: ' + path)
+          files = set()
+          for pattern in ('*.tex', '*.pdf', '*.py', '*.json', 'requirements.txt', 'README.md', 'LICENSE', 'CITATION.cff'):
+              files.update(Path('.').glob(pattern))
+          files.discard(Path('source_manifest.json'))
+          manifest = json.loads(Path('source_manifest.json').read_text())
+          manifest['files'] = [{'path': p.as_posix(), 'bytes': p.stat().st_size, 'sha256': sha(p)} for p in sorted(files)]
+          Path('source_manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
+          files.add(Path('source_manifest.json'))
+          files.update(Path('verification').glob('github_*'))
+          files.discard(Path('verification/github_package_record.json'))
+          target = Path('TCGS_Riemann_Hypothesis_Study_Overleaf.zip')
+          with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as archive:
+              for path in sorted(files):
+                  if path.is_file():
+                      archive.write(path, path.as_posix())
+          record = {'status': 'PASS', 'source_and_reference_outputs_unchanged': True,
+                    'manuscript_sha256': sha('main.tex'), 'pdf_sha256': sha('main.pdf'),
+                    'bundle_sha256': sha(target), 'bundle_files': len(files),
+                    'citation_sha256': sha('CITATION.cff')}
+          Path('verification/github_package_record.json').write_text(json.dumps(record, indent=2) + '\n')
+          print(json.dumps(record, indent=2))
+          PY
+      - name: Commit the refreshed metadata and bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add source_manifest.json TCGS_Riemann_Hypothesis_Study_Overleaf.zip verification/github_package_record.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh the verified paper bundle and citation metadata'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
