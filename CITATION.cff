@@ -1,34 +1,38 @@
 cff-version: 1.2.0
 message: "Please cite the manuscript specified in preferred-citation when using this paper or its diagnostic code."
 type: software
-title: "Moment and Prime-Trace Criteria for the Riemann Hypothesis, with Two Spectral Exclusions"
+title: "Moment and Prime-Trace Criteria for the Riemann Hypothesis, with Spectral Exclusions and Nonlocal Positivity"
 authors:
   - family-names: "Arellano-Peña"
     given-names: "Henry"
     affiliation: "Nuevo Estandar Biotropical NEBIOT S.A.S., Bogotá, Colombia"
-version: "SUBMISSION_FINAL"
-date-released: "2026-09-06"
+version: "REVIEW_AMENDED_2026-09-30"
+date-released: "2026-09-30"
 url: "https://github.com/hyrucanji77/TCGS_Riemann_Hypothesis_Study"
 repository-code: "https://github.com/hyrucanji77/TCGS_Riemann_Hypothesis_Study"
 license: CC-BY-4.0
 preferred-citation:
   type: article
-  title: "Moment and Prime-Trace Criteria for the Riemann Hypothesis, with Two Spectral Exclusions"
+  title: "Moment and Prime-Trace Criteria for the Riemann Hypothesis, with Spectral Exclusions and Nonlocal Positivity"
   authors:
     - family-names: "Arellano-Peña"
       given-names: "Henry"
   year: 2026
   status: preprint
-  url: "https://github.com/hyrucanji77/TCGS_Riemann_Hypothesis_Study/blob/main/main.pdf"
+  url: "https://github.com/hyrucanji77/TCGS_Riemann_Hypothesis_Study/blob/main/riemann_hypothesis_TCGS_SEQUENTION.pdf"
 abstract: >-
-  Moment and prime-trace formulations of the Riemann hypothesis, spectral
-  exclusions including a constant-coefficient Morse family, and a separately
-  stated TCGS–SEQUENTION source-to-readout realization problem. The Riemann
-  hypothesis is not proved.
+  Moment and prime-trace criteria for the Riemann hypothesis, compact-elliptic
+  and regular boundary-power exclusions, the full constant-coefficient Morse
+  exclusion, and continuous-kernel and nonlocal positivity formulations.
+  Conditional TCGS–SEQUENTION source-to-readout identifications are explicitly
+  separated from the analytic results. The Riemann hypothesis is not proved.
 keywords:
   - Riemann hypothesis
   - moment problem
   - spectral geometry
   - Fredholm determinants
   - Morse potential
+  - Weil positivity
+  - screw kernels
+  - nonlocal spectral limits
   - TCGS-SEQUENTION

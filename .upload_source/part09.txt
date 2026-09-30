@@ -1,0 +1,4 @@
+
+% BEGIN ADDITION 2026-09-30: conclusion extension
+The continuous-kernel extension adds exact conversion formulas and conditional transfer mechanisms without changing this conclusion. Its finite-window arithmetic is explicit; its source Gram witnesses and nonlocal analytic limit remain unconstructed. The distinction among the moment determinant, the screw kernel, and the characteristic ratio prevents positivity or spectral agreement in one representation from being silently promoted to equality in another.
+% END ADDITION 2026-09-30: conclusion extension

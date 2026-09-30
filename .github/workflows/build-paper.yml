@@ -7,6 +7,10 @@ on:
       - 'main.tex'
       - '.upload_source/ready.json'
       - '.github/workflows/build-paper.yml'
+      - '*.py'
+      - 'requirements.txt'
+      - 'release_integrity_20260930.json'
+      - 'tools/publish_review.py'
   workflow_dispatch:
 
 permissions:
@@ -21,136 +25,78 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
-      - name: Check out the manuscript
+      - name: Check out the current manuscript and its history
         uses: actions/checkout@v4
-      - name: Assemble the exact source on initial import
-        shell: bash
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import hashlib, json
-          manifest_path = Path('.upload_source/ready.json')
-          if manifest_path.exists():
-              manifest = json.loads(manifest_path.read_text())
-              chunks = []
-              for item in manifest['parts']:
-                  path = Path(item['path'])
-                  if path.parent != Path('.upload_source') or path.suffix != '.txt':
-                      raise SystemExit('Invalid source-part path')
-                  data = path.read_bytes()
-                  if hashlib.sha256(data).hexdigest() != item['sha256']:
-                      raise SystemExit('Source-part checksum mismatch: ' + str(path))
-                  chunks.append(data)
-              data = b''.join(chunks)
-              if hashlib.sha256(data).hexdigest() != manifest['sha256']:
-                  raise SystemExit('Assembled source checksum mismatch')
-              target = Path('main.tex')
-              if target.exists() and target.read_bytes() != data:
-                  raise SystemExit('Refusing to replace a different manuscript')
-              target.write_bytes(data)
-              print('Original submission source verified:', manifest['sha256'])
-          PY
-      - name: Check source availability
-        id: source
-        shell: bash
-        run: |
-          if test -f main.tex; then
-            echo 'present=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'present=false' >> "$GITHUB_OUTPUT"
-            echo 'Manuscript upload is not complete yet; no PDF is built.'
-          fi
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Import the exact reviewed source
+        run: python3 tools/publish_review.py import-source
       - name: Install the LaTeX build tools
-        if: steps.source.outputs.present == 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install --no-install-recommends -y texlive-latex-base texlive-latex-recommended texlive-latex-extra lmodern poppler-utils
-      - name: Compile the unchanged manuscript
-        if: steps.source.outputs.present == 'true'
+          sudo apt-get install --no-install-recommends -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils
+      - name: Compile the unchanged reviewed manuscript
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p build
+          mkdir -p build verification
           pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build main.tex
           pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build main.tex
           pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build main.tex
           if grep -Eq 'There were undefined references|Citation .* undefined|Reference .* undefined' build/main.log; then
-            echo 'Unresolved references found in the manuscript build.' >&2
+            echo 'Unresolved manuscript references.' >&2
             exit 1
           fi
           cp build/main.pdf main.pdf
-          mkdir -p verification
-          sha256sum main.tex main.pdf > verification/github_build_sha256.txt
+          cp build/main.pdf riemann_hypothesis_TCGS_SEQUENTION.pdf
+          sha256sum main.tex main.pdf riemann_hypothesis_TCGS_SEQUENTION.pdf > verification/github_build_sha256.txt
           pdflatex --version > verification/github_tex_version.txt
           pdfinfo main.pdf > verification/github_pdf_info.txt
           pdftotext -layout main.pdf verification/github_paper_text.txt
       - name: Install the reference Python runtime
-        if: steps.source.outputs.present == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.13.5'
-      - name: Reproduce all diagnostic outputs
-        if: steps.source.outputs.present == 'true'
-        shell: bash
+      - name: Verify the approved scientific files
         run: |
-          set -euo pipefail
           python -m pip install -r requirements.txt
+          python tools/publish_review.py verify-inputs
+      - name: Reproduce the nine legacy diagnostics
+        run: |
           python verify_release.py --output-dir verification/fresh_run_ci --jobs 2 --timeout 600
           cp verification/fresh_run_ci/report.json verification/github_diagnostics_report.json
-      - name: Record sources and package the article
-        if: steps.source.outputs.present == 'true'
-        shell: bash
+      - name: Reproduce Appendix E separately
         run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import hashlib, json, zipfile
-          files = set()
-          for pattern in ('*.tex', '*.pdf', '*.py', '*.json', 'requirements.txt', 'README.md', 'LICENSE', 'CITATION.cff'):
-              files.update(Path('.').glob(pattern))
-          files.discard(Path('source_manifest.json'))
-          manifest = {
-              'release': 'SUBMISSION_FINAL',
-              'repository_delivery': 'paper, code, reference outputs, and GitHub build records',
-              'main_document': 'main.tex',
-              'pdf_provenance': 'Compiled on GitHub from main.tex; not a byte-identical upload of a prior PDF.',
-              'mathematical_status': 'RH is not proved; the source-derived arithmetic identity remains unconstructed.',
-              'excluded_material': 'Historical drafts, private editorial correspondence, source-document PDF archive, and generated infographic are not included.',
-              'files': [{'path': p.as_posix(), 'bytes': p.stat().st_size, 'sha256': hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(files)]
-          }
-          Path('source_manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
-          files.add(Path('source_manifest.json'))
-          files.update(Path('verification').glob('github_*'))
-          with zipfile.ZipFile('TCGS_Riemann_Hypothesis_Study_Overleaf.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
-              for path in sorted(files):
-                  if path.is_file():
-                      archive.write(path, path.as_posix())
-          PY
+          python verify_screw_release.py --output-dir verification/fresh_screw_ci --timeout 600
+          cp verification/fresh_screw_ci/report.json verification/github_screw_diagnostics_report.json
+      - name: Package the verified paper and code
+        run: python tools/publish_review.py package
       - name: Retain build and verification artifacts
-        if: steps.source.outputs.present == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: riemann-paper-and-verification
+          name: riemann-review-amended-paper-and-verification
           path: |
             main.pdf
             main.tex
+            riemann_hypothesis_TCGS_SEQUENTION.pdf
             TCGS_Riemann_Hypothesis_Study_Overleaf.zip
             verification/github_*
             build/main.log
           if-no-files-found: error
           retention-days: 30
-      - name: Commit the compiled paper
-        if: steps.source.outputs.present == 'true'
+      - name: Commit the compiled paper and verified bundle
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add main.tex main.pdf source_manifest.json TCGS_Riemann_Hypothesis_Study_Overleaf.zip verification/github_build_sha256.txt verification/github_tex_version.txt verification/github_pdf_info.txt verification/github_paper_text.txt verification/github_diagnostics_report.json
+          git add main.tex main.pdf riemann_hypothesis_TCGS_SEQUENTION.pdf source_manifest.json TCGS_Riemann_Hypothesis_Study_Overleaf.zip screw_kernel_40.json screw_kernel_60.json verification/github_*
           if test -f .upload_source/ready.json; then
             git rm -r .upload_source
           fi
           if ! git diff --cached --quiet; then
-            git commit -m 'Publish final submission source, compiled paper, and verified Overleaf bundle'
+            git commit -m 'Publish 30 September review-amended manuscript and verified Appendix E bundle'
             git pull --rebase origin main
             git push origin HEAD:main
           fi

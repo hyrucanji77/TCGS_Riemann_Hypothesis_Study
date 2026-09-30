@@ -1,0 +1,55 @@
+{
+  "release": "REVIEW_AMENDED_2026-09-30",
+  "manuscript_sha256": "5a6dc2b0ddc6752466a3d1b9b21411007f95cd98b88c29264cd3baaaf9456069",
+  "reference_pdf_sha256": "de4c773fd69d7ec2fdd26cb70b71c2f8ad426b00839018dc0c4d05ecfbd3cabf",
+  "expected_pages": 65,
+  "scientific_scripts": [
+    "diagnostics.py",
+    "morse_diagnostics.py",
+    "robin_shift_diagnostics.py",
+    "boundary_trace_diagnostics.py",
+    "scale_endpoint_diagnostics.py",
+    "shifted_tower_diagnostics.py",
+    "completed_tower_diagnostics.py",
+    "kinetic_rate_diagnostics.py",
+    "sesquilinear_diagnostics.py",
+    "screw_kernel_diagnostics.py"
+  ],
+  "verification_drivers": [
+    "verify_release.py",
+    "verify_screw_release.py"
+  ],
+  "source_sha256": {
+    "diagnostics.py": "95e8e87f08fee5cfd2865141313d8b2958e7aff6a9cee91766a04e1736388e52",
+    "morse_diagnostics.py": "f5ced0734800b76950a968f08036fcf4610612134c4f971caef9800516256da3",
+    "robin_shift_diagnostics.py": "49410297575a79b52f383e9827112c7350f9c7e12703600857fdba3e2b82a6a6",
+    "boundary_trace_diagnostics.py": "d857d0c5a9f4bf388eda13263b87d4f48b75e168fd0b52de1e8792008cef8bee",
+    "scale_endpoint_diagnostics.py": "d1211bcb2dac62735decb222b71c9a073b0e54a96f5294694f2fab32546122de",
+    "shifted_tower_diagnostics.py": "412481f1fab8025e49f98a6eeaf5983dace678a847e4e1f41b77f2f7a79c728f",
+    "completed_tower_diagnostics.py": "e6105a0d540a97352a26ca41a42ac4950d1907b382c2390742d49ce1d4bb3aa0",
+    "kinetic_rate_diagnostics.py": "736a7ebf50fb59282fac36bae51353d0ccc770d7caea0b0826866fa18f47585e",
+    "sesquilinear_diagnostics.py": "3c5f91ef1fa80c14a5d4045522392f9c8b1017274ffc693834818efa1ca87e15",
+    "screw_kernel_diagnostics.py": "5723f86cd3c31b92dd33b415ef4b2cffd1d649c8d213d69226b72fbb831c90bc",
+    "verify_release.py": "2d9491bcf6322699a05ff1b664f59da29d292799575fa479421f7dcd0bc3f2ec",
+    "verify_screw_release.py": "217d21e68c8ba50680f61a42e58a2bdac3fa1847d9d5535be9c475b02a3157f1",
+    "requirements.txt": "a699f46ed76bd216f1081b6b2330e4fb45d7c8c5a5354b208694d6590a5a8645"
+  },
+  "reference_outputs_sha256": {
+    "diagnostics_40.json": "a5aaf30f56e21e26e33db33111ffd01fac1c2c8697ad774254eb82468fc7c0ac",
+    "diagnostics_60.json": "2018cd51a3b629ea8857b92455a9291336094da2b03087d1af37c9b05a1f8fb0",
+    "morse_diagnostics.json": "6f9e1ce316b467ecdff12e289209a0268b3e43ac849fcfb52cbd4dbd9981b698",
+    "robin_shift_diagnostics_60.json": "e1543912c7090e802d5411366ca3e3d8ec2215fbcf852f7c5a58f0d865b07a7b",
+    "robin_shift_diagnostics_80.json": "679f43783c8a777662f18d9699718a8e5c33a4db4fb11e3924ffd079f4b2c7e8",
+    "boundary_trace_diagnostics.json": "d303f727bba603c4a89512bd2d910632411ada19c07d305c6d4a3d8e4b89ac12",
+    "scale_endpoint_diagnostics.json": "f84b5b8192544295a31fc6d1cb4dbe4e3d1ce62d2868dca58f8be62645d5edb0",
+    "shifted_tower_diagnostics_40.json": "0681233b8febd5512240c0bdd87862e626b2dd9bdff3f358d7b350f93300bd60",
+    "shifted_tower_diagnostics_60.json": "e55dc3f513a70e847d55e05cfcd690a083b465472c841fc65c6c971bba0406db",
+    "completed_tower_diagnostics_40.json": "9b09a1824fd79e4dbaa4b8d8480711916909d4a02afdfc398d71c79d51b4a42c",
+    "completed_tower_diagnostics_60.json": "97a24b8647a114b75f81ef61d9b513d5f0025be4ddc57ac95c1fca3792d406e1",
+    "kinetic_rate_diagnostics.json": "845a296b66fe0d99b15e997638267f4548cef68bb6e6356c3d349960f363479d",
+    "sesquilinear_diagnostics.json": "e27a64905be1b007054715c8f7d3af028059e57d39bc3ff42c57585e02ff6dc5",
+    "screw_kernel_40.json": "f55f2ed9dce70a66a9116ce059762020783322be99488a849948e68db6fb5ce1",
+    "screw_kernel_60.json": "1b8f2a14042c29571fccf2445f66127a3a55d2845a224a0beb60cc1fc53d8a31"
+  },
+  "pdf_note": "The approved PDF checksum identifies the local review artifact. GitHub recompilation may differ in binary metadata; the manuscript source must match exactly."
+}

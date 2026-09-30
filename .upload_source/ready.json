@@ -1,0 +1,89 @@
+{
+  "format": "line-edits-v1",
+  "release": "REVIEW_AMENDED_2026-09-30",
+  "base_commit": "7f8d21caabe9367ba63ac22afccdaf06e759e656",
+  "base_sha256": "ac81d0f3aaa5cbe1df54108a6165efcee2e29885637b9c21aa32d6dbbb490df6",
+  "sha256": "5a6dc2b0ddc6752466a3d1b9b21411007f95cd98b88c29264cd3baaaf9456069",
+  "reference_pdf_sha256": "de4c773fd69d7ec2fdd26cb70b71c2f8ad426b00839018dc0c4d05ecfbd3cabf",
+  "reference_pdf_pages": 65,
+  "parts": [
+    {
+      "start": 6,
+      "end": 6,
+      "path": ".upload_source/part01.txt",
+      "sha256": "8e2f24eb830d888a12419e33f025c1ed0dc8c1e4949c42b06c08d0e20e52e507"
+    },
+    {
+      "start": 12,
+      "end": 13,
+      "path": ".upload_source/part02.txt",
+      "sha256": "5952b2554e1b5b70533d8e1a1c65b891df9e7b86b06151d6c0016456a21eb766"
+    },
+    {
+      "start": 55,
+      "end": 56,
+      "path": ".upload_source/part03.txt",
+      "sha256": "7b9c6ec5d33b7481806dc9c00d6d70ebc671e47002b10d947d4c1cb5e1a27ca6"
+    },
+    {
+      "start": 63,
+      "end": 64,
+      "path": ".upload_source/part04.txt",
+      "sha256": "5e5e510d66fa2c2f2863218c385e173fc06abb6bb1d398bc670107b872f64946"
+    },
+    {
+      "start": 65,
+      "end": 66,
+      "path": ".upload_source/part05.txt",
+      "sha256": "cb22420ce0d1f2752f00a246e7757a276781a946753fd845280b49c6d89b92d3"
+    },
+    {
+      "start": 89,
+      "end": 89,
+      "path": ".upload_source/part06.txt",
+      "sha256": "a35cd477600262311b21b47fe7586ca53d8878f9f0f7fcf873c3d7f49ef84eb1"
+    },
+    {
+      "start": 603,
+      "end": 603,
+      "path": ".upload_source/part07.txt",
+      "sha256": "79f6c7e54de790793f7797d0f06c312a2deb12efa1ebcde07b918c58850cad9f"
+    },
+    {
+      "start": 1933,
+      "end": 1933,
+      "path": ".upload_source/part08.txt",
+      "sha256": "f3066c9b465975170cda36b4232b454067f5ae95426daf76ef7df0c14cc2afb8"
+    },
+    {
+      "start": 1951,
+      "end": 1951,
+      "path": ".upload_source/part09.txt",
+      "sha256": "ac979d5054ff1d97530b9179a118d02c9aeae9b628c9cecd8a98ff74fa95210b"
+    },
+    {
+      "start": 2219,
+      "end": 2219,
+      "path": ".upload_source/part10.txt",
+      "sha256": "62864078cc904b2d55b130692536dd95d1cfc0062ff095a03efd141f9cb32b4b"
+    },
+    {
+      "start": 2222,
+      "end": 2223,
+      "path": ".upload_source/part11.txt",
+      "sha256": "f2d05752a3f87fd33c6165dcf0391eda11c0e90c52e93fcb2204e5f8af613655"
+    },
+    {
+      "start": 2227,
+      "end": 2227,
+      "path": ".upload_source/part12.txt",
+      "sha256": "85b3db2c0a1ce25023414b9fae41b95a9af4aec255b7c1d123973af26e314fed"
+    },
+    {
+      "start": 2415,
+      "end": 2415,
+      "path": ".upload_source/part13.txt",
+      "sha256": "25a273b13320a771283b6ae3731b85a918a8383ad31a942d7492800d7d5f147c"
+    }
+  ]
+}

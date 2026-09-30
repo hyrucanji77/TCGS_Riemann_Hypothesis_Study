@@ -1,0 +1,4 @@
+
+% BEGIN ADDITION 2026-09-30: introduction connection
+Recent arithmetic spectral constructions sharpen the intermediate representation problem. The extremal real-zero theorem of Connes and van Suijlekom, the arithmetic rank-one construction of Connes--Consani--Moscovici, and Suzuki's screw-function formulation lead to different operators and limiting targets \cite{connesvansuijlekom2025,connesconsanim2025,suzuki2023,suzuki2026}. Appendix~\ref{app:weil} gives the exact normalization links, an all-window constitutive Gram-transfer implication, and finite-window error estimates. It also distinguishes the meromorphic characteristic ratio from the determinant $F$, preserving multiplicity information rather than comparing zero sets alone.
+% END ADDITION 2026-09-30: introduction connection

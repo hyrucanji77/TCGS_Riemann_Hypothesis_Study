@@ -1,0 +1,4 @@
+% BEGIN ADDITION 2026-09-30: script-letter kernel notation
+\usepackage{mathrsfs}
+% END ADDITION 2026-09-30: script-letter kernel notation
+

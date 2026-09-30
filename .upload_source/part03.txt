@@ -1,0 +1,4 @@
+% BEGIN PRESERVED TITLE BEFORE REVIEW 2026-09-30
+% \title{\textbf{Moment and Prime-Trace Criteria for the Riemann Hypothesis, with Two Spectral Exclusions}}
+% END PRESERVED TITLE BEFORE REVIEW 2026-09-30
+\title{\textbf{Moment and Prime-Trace Criteria for the Riemann Hypothesis, with Spectral Exclusions and Nonlocal Positivity}}
