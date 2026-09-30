@@ -1,4 +1,0 @@
-
-% BEGIN ADDITION 2026-09-30: prime trace connection
-A continuous arithmetic intermediate is available in Appendix~\ref{app:weil}. Proposition~\ref{prop:screw_laplace} rewrites the same completed prime-side target as a Laplace transform, while Proposition~\ref{prop:ratio_moment} connects it to a nonlocal characteristic ratio. These changes of representation retain the completion terms and do not replace the positive trace-class requirement in Theorem~\ref{thm:primetrace}.
-% END ADDITION 2026-09-30: prime trace connection

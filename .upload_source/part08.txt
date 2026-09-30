@@ -1,8 +1,0 @@
-% BEGIN ADDITION 2026-09-30: discussion extension
-\subsection{Weil kernels as an arithmetic intermediate}
-\label{subsec:discussionweil}
-The source-to-arithmetic construction need not proceed through an additional local potential. Appendix~\ref{app:weil} identifies a continuous kernel whose exact transform is the logarithmic-moment function already used here. Theorem~\ref{thm:source_screw_transfer} transfers an independently derived source Gram representation of that kernel to the existing RH criteria. Proposition~\ref{prop:ratio_moment} also shows why the characteristic ratio proposed in a nonlocal extension programme must not be called the Fredholm determinant: its zeros are simple even when the corresponding zero of $\xi$ has higher multiplicity, which remains encoded in the derivative.
-
-The comparison gives additional mathematical tests, not an exemption from arithmetic identification. A shifted positive norm cannot establish positivity of its unshifted form; a signed first-order spectrum doubles the reciprocal-square tower unless the appropriate sector is selected; finite-window arithmetic must be combined with an all-window or complex-function limit. The resulting source-realization requirement remains consistent with the independently specified norms and selector transport in Section~\ref{sec:gram}. No nonlocal limit or source insertion is assumed to exist merely because its conditional consequences can be proved.
-% END ADDITION 2026-09-30: discussion extension
-

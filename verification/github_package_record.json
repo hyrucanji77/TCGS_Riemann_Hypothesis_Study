@@ -1,9 +1,10 @@
 {
   "status": "PASS",
-  "source_and_reference_outputs_unchanged": true,
-  "manuscript_sha256": "ac81d0f3aaa5cbe1df54108a6165efcee2e29885637b9c21aa32d6dbbb490df6",
-  "pdf_sha256": "b65e24318d3a618aea7569ffa1800869361173c1f2003cf938c75679739d30af",
-  "bundle_sha256": "88cfd284a889c052284f01c8aed160f5d3017a1163bdbfc2773edd947205384a",
-  "bundle_files": 36,
-  "citation_sha256": "ce98578d6fc96c93aa68affd6c06dc8f0cf3663e35e99c8b28a82fa35fc2700e"
+  "release": "REVIEW_AMENDED_2026-09-30",
+  "manuscript_sha256": "5a6dc2b0ddc6752466a3d1b9b21411007f95cd98b88c29264cd3baaaf9456069",
+  "pdf_sha256": "b14a73458d3a4159d4cb0fbc230dcd1cebc82ee7ab1064749361f7b1e362a645",
+  "bundle_sha256": "a48d12b594f21c7c893dc14ecb7a18359c3c033ebf162b2eb3d9cef647d90b16",
+  "bundle_files": 45,
+  "pages": 65,
+  "citation_sha256": "9a818989df3b98614a4f2c1b1139d59df6c281eca73d2ed570d042e259b73f7c"
 }

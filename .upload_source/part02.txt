@@ -1,1 +1,0 @@
-\hypersetup{pdftitle={Moment and Prime-Trace Criteria for the Riemann Hypothesis, with Spectral Exclusions and Nonlocal Positivity},

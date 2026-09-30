@@ -1,15 +1,19 @@
 {
-  "release": "SUBMISSION_FINAL",
-  "repository_delivery": "paper, code, reference outputs, and GitHub build records",
+  "release": "REVIEW_AMENDED_2026-09-30",
   "main_document": "main.tex",
-  "pdf_provenance": "Compiled on GitHub from main.tex; not a byte-identical upload of a prior PDF.",
-  "mathematical_status": "RH is not proved; the source-derived arithmetic identity remains unconstructed.",
-  "excluded_material": "Historical drafts, private editorial correspondence, source-document PDF archive, and generated infographic are not included.",
+  "pdf_provenance": "Recompiled on GitHub from the exact reviewed source; not claimed byte-identical to the local PDF.",
+  "approved_source_sha256": "5a6dc2b0ddc6752466a3d1b9b21411007f95cd98b88c29264cd3baaaf9456069",
+  "approved_local_pdf_sha256": "de4c773fd69d7ec2fdd26cb70b71c2f8ad426b00839018dc0c4d05ecfbd3cabf",
+  "pages": 65,
+  "scientific_diagnostic_scripts": 10,
+  "verification_drivers": 2,
+  "mathematical_status": "RH is not proved; the source-derived arithmetic identity and required nonlocal limit remain unconstructed.",
+  "excluded_material": "Historical drafts, private correspondence, third-party source-PDF archive, and infographic are not part of this paper-and-code bundle.",
   "files": [
     {
       "path": "CITATION.cff",
-      "bytes": 1361,
-      "sha256": "ce98578d6fc96c93aa68affd6c06dc8f0cf3663e35e99c8b28a82fa35fc2700e"
+      "bytes": 1637,
+      "sha256": "9a818989df3b98614a4f2c1b1139d59df6c281eca73d2ed570d042e259b73f7c"
     },
     {
       "path": "LICENSE",
@@ -18,8 +22,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5308,
-      "sha256": "0dff3074685ddf55c4b4ffd2831eecc5edead5f618448fbf43f293e7835ddfd2"
+      "bytes": 6733,
+      "sha256": "7067a12f6900271cb98d67c90b682314bd8f7da3bbc000d3abb6cef5a4e7afcf"
     },
     {
       "path": "boundary_trace_diagnostics.json",
@@ -73,13 +77,13 @@
     },
     {
       "path": "main.pdf",
-      "bytes": 742986,
-      "sha256": "b65e24318d3a618aea7569ffa1800869361173c1f2003cf938c75679739d30af"
+      "bytes": 799663,
+      "sha256": "b14a73458d3a4159d4cb0fbc230dcd1cebc82ee7ab1064749361f7b1e362a645"
     },
     {
       "path": "main.tex",
-      "bytes": 182658,
-      "sha256": "ac81d0f3aaa5cbe1df54108a6165efcee2e29885637b9c21aa32d6dbbb490df6"
+      "bytes": 223425,
+      "sha256": "5a6dc2b0ddc6752466a3d1b9b21411007f95cd98b88c29264cd3baaaf9456069"
     },
     {
       "path": "morse_diagnostics.json",
@@ -97,9 +101,19 @@
       "sha256": "85ee7bbdb3f2b0e28f6619ccf3220751ab6bd3b02c7b93e13e653b5abd5f17ec"
     },
     {
+      "path": "release_integrity_20260930.json",
+      "bytes": 3804,
+      "sha256": "40bd52df15070f28a83482fdf96c08f3f5ef485267345fbbf3e5a0787da273bc"
+    },
+    {
       "path": "requirements.txt",
       "bytes": 14,
       "sha256": "a699f46ed76bd216f1081b6b2330e4fb45d7c8c5a5354b208694d6590a5a8645"
+    },
+    {
+      "path": "riemann_hypothesis_TCGS_SEQUENTION.pdf",
+      "bytes": 799663,
+      "sha256": "b14a73458d3a4159d4cb0fbc230dcd1cebc82ee7ab1064749361f7b1e362a645"
     },
     {
       "path": "robin_shift_diagnostics.py",
@@ -127,6 +141,21 @@
       "sha256": "d1211bcb2dac62735decb222b71c9a073b0e54a96f5294694f2fab32546122de"
     },
     {
+      "path": "screw_kernel_40.json",
+      "bytes": 7809,
+      "sha256": "f55f2ed9dce70a66a9116ce059762020783322be99488a849948e68db6fb5ce1"
+    },
+    {
+      "path": "screw_kernel_60.json",
+      "bytes": 9342,
+      "sha256": "1b8f2a14042c29571fccf2445f66127a3a55d2845a224a0beb60cc1fc53d8a31"
+    },
+    {
+      "path": "screw_kernel_diagnostics.py",
+      "bytes": 8148,
+      "sha256": "5723f86cd3c31b92dd33b415ef4b2cffd1d649c8d213d69226b72fbb831c90bc"
+    },
+    {
       "path": "sesquilinear_diagnostics.json",
       "bytes": 3432,
       "sha256": "e27a64905be1b007054715c8f7d3af028059e57d39bc3ff42c57585e02ff6dc5"
@@ -152,9 +181,19 @@
       "sha256": "e55dc3f513a70e847d55e05cfcd690a083b465472c841fc65c6c971bba0406db"
     },
     {
+      "path": "tools/publish_review.py",
+      "bytes": 7420,
+      "sha256": "618b424109acfbd6dcc33d9a62e977b8260f3c435bcc0b4cf01a7d7173f43b16"
+    },
+    {
       "path": "verify_release.py",
       "bytes": 11332,
       "sha256": "2d9491bcf6322699a05ff1b664f59da29d292799575fa479421f7dcd0bc3f2ec"
+    },
+    {
+      "path": "verify_screw_release.py",
+      "bytes": 5301,
+      "sha256": "217d21e68c8ba50680f61a42e58a2bdac3fa1847d9d5535be9c475b02a3157f1"
     }
   ]
 }

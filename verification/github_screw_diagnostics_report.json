@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "manuscript_sha256": "5a6dc2b0ddc6752466a3d1b9b21411007f95cd98b88c29264cd3baaaf9456069",
+  "driver_sha256": "217d21e68c8ba50680f61a42e58a2bdac3fa1847d9d5535be9c475b02a3157f1",
+  "jobs": [
+    {
+      "dps": 40,
+      "command": [
+        "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+        "-B",
+        "screw_kernel_diagnostics.py",
+        "--dps",
+        "40",
+        "--output",
+        "screw_kernel_40.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.585,
+      "output": "screw_kernel_40.json",
+      "sha256": "f55f2ed9dce70a66a9116ce059762020783322be99488a849948e68db6fb5ce1",
+      "byte_identical_to_packaged_output": true,
+      "json_equal_except_python_version": true,
+      "exact_checks": 56
+    },
+    {
+      "dps": 60,
+      "command": [
+        "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+        "-B",
+        "screw_kernel_diagnostics.py",
+        "--dps",
+        "60",
+        "--output",
+        "screw_kernel_60.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.228,
+      "output": "screw_kernel_60.json",
+      "sha256": "1b8f2a14042c29571fccf2445f66127a3a55d2845a224a0beb60cc1fc53d8a31",
+      "byte_identical_to_packaged_output": true,
+      "json_equal_except_python_version": true,
+      "exact_checks": 56
+    }
+  ],
+  "printed_comparisons": [
+    {
+      "dps": 40,
+      "a": "1/2",
+      "cutoff": 3,
+      "printed": "0.0400010208048755",
+      "recomputed": "0.040001020804875482986876549566344111",
+      "rounding_tolerance": "5E-17",
+      "pass": true
+    },
+    {
+      "dps": 40,
+      "a": "1",
+      "cutoff": 8,
+      "printed": "0.0363429964746402",
+      "recomputed": "0.036342996474640184098160032054474161",
+      "rounding_tolerance": "5E-17",
+      "pass": true
+    },
+    {
+      "dps": 40,
+      "a": "2",
+      "cutoff": 55,
+      "printed": "0.0341769970295997",
+      "recomputed": "0.03417699702959966652425631536102563",
+      "rounding_tolerance": "5E-17",
+      "pass": true
+    },
+    {
+      "dps": 60,
+      "a": "1/2",
+      "cutoff": 3,
+      "printed": "0.0400010208048755",
+      "recomputed": "0.04000102080487548298687654956634411127973423286350470089",
+      "rounding_tolerance": "5E-17",
+      "pass": true
+    },
+    {
+      "dps": 60,
+      "a": "1",
+      "cutoff": 8,
+      "printed": "0.0363429964746402",
+      "recomputed": "0.03634299647464018409816003205447416081456788676316275351",
+      "rounding_tolerance": "5E-17",
+      "pass": true
+    },
+    {
+      "dps": 60,
+      "a": "2",
+      "cutoff": 55,
+      "printed": "0.0341769970295997",
+      "recomputed": "0.03417699702959966652425631536102563048489920449672180886",
+      "rounding_tolerance": "5E-17",
+      "pass": true
+    }
+  ],
+  "printed_comparison_count": 6,
+  "distinct_exact_checks": 56,
+  "scope": "Fresh-directory regression and exact rational checks; no interval certification, global positivity, RH proof, or source-derived arithmetic operator."
+}

@@ -1,4 +1,0 @@
-
-% BEGIN ADDITION 2026-09-30: additional reproducibility disclosure
-The tenth scientific script, \texttt{screw\_kernel\_diagnostics.py}, is accompanied by separate 40- and 60-digit outputs and is rerun by \path{verify_screw_release.py}, not by \path{verify_release.py}. This second driver checks both outputs and the three printed rows of Table~\ref{tab:screw_diagnostics}, giving six printed-value comparisons; its 56 distinct exact integer/rational checks are counted once across the two precisions. It does not replace any earlier diagnostic. Its computations distinguish exact integer/rational checks from arbitrary-precision evaluations; no numerical output is treated as an interval certificate. The versioned external works supporting Appendix~\ref{app:weil} are listed individually in the bibliography.
-% END ADDITION 2026-09-30: additional reproducibility disclosure

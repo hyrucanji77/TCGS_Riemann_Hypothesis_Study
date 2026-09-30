@@ -85,5 +85,8 @@
       "path": ".upload_source/part13.txt",
       "sha256": "25a273b13320a771283b6ae3731b85a918a8383ad31a942d7492800d7d5f147c"
     }
-  ]
+  ],
+  "status": "PASS",
+  "bytes": 223425,
+  "statement": "main.tex is byte-identical to the approved review-amended source. PDF compilation is separate."
 }

@@ -1,0 +1,224 @@
+{
+  "status": "PASS",
+  "dps": 40,
+  "python": "3.13.5",
+  "mpmath": "1.3.0",
+  "exact_checks": {
+    "count": 56,
+    "all_pass": true,
+    "checks": [
+      "complete window cutoff a=1/2, P=3",
+      "complete window cutoff a=1, P=8",
+      "complete window cutoff a=2, P=55",
+      "unique prime powers",
+      "composite non-power absent",
+      "power 49 retained",
+      "power 32 retained",
+      "integer prime-power factorization 2",
+      "integer prime-power factorization 3",
+      "integer prime-power factorization 4",
+      "integer prime-power factorization 5",
+      "integer prime-power factorization 7",
+      "integer prime-power factorization 8",
+      "integer prime-power factorization 9",
+      "integer prime-power factorization 11",
+      "integer prime-power factorization 13",
+      "integer prime-power factorization 16",
+      "integer prime-power factorization 17",
+      "integer prime-power factorization 19",
+      "integer prime-power factorization 23",
+      "integer prime-power factorization 25",
+      "integer prime-power factorization 27",
+      "integer prime-power factorization 29",
+      "integer prime-power factorization 31",
+      "integer prime-power factorization 32",
+      "integer prime-power factorization 37",
+      "integer prime-power factorization 41",
+      "integer prime-power factorization 43",
+      "integer prime-power factorization 47",
+      "integer prime-power factorization 49",
+      "integer prime-power factorization 53",
+      "signed-spectrum doubled trace 0",
+      "scalar division has wrong higher trace 0",
+      "signed-spectrum doubled trace 1",
+      "scalar division has wrong higher trace 1",
+      "signed-spectrum doubled trace 2",
+      "scalar division has wrong higher trace 2",
+      "signed-spectrum doubled trace 3",
+      "scalar division has wrong higher trace 3",
+      "signed-spectrum doubled trace 4",
+      "scalar division has wrong higher trace 4",
+      "signed-spectrum doubled trace 5",
+      "scalar division has wrong higher trace 5",
+      "signed-spectrum doubled trace 6",
+      "scalar division has wrong higher trace 6",
+      "2020 row aggregation gives one",
+      "later candidate aggregation gives two",
+      "exact prime count below 36 is eleven",
+      "candidate-first x=36 reconstruction",
+      "anchored three-term maximum entry error",
+      "entrywise-to-quadratic bound 0",
+      "Euclidean coefficient bound 0",
+      "entrywise-to-quadratic bound 1",
+      "Euclidean coefficient bound 1",
+      "entrywise-to-quadratic bound 2",
+      "Euclidean coefficient bound 2"
+    ]
+  },
+  "arithmetic_windows": [
+    {
+      "a": "0.5",
+      "complete_integer_cutoff": 3,
+      "points": [
+        "-0.5",
+        "-0.25",
+        "0.25",
+        "0.5"
+      ],
+      "matrix": [
+        [
+          "0.080325160764173329972228295993982238",
+          "0.040162580382086664986114147996991119",
+          "0.040967101120798820023962158089414292",
+          "0.036317855527320803112009689585898465"
+        ],
+        [
+          "0.040162580382086664986114147996991119",
+          "0.10246699256466737396629942230976056",
+          "0.062304412182580708980185274312769444",
+          "0.040967101120798820023962158089414292"
+        ],
+        [
+          "0.040967101120798820023962158089414292",
+          "0.062304412182580708980185274312769444",
+          "0.10246699256466737396629942230976056",
+          "0.040162580382086664986114147996991119"
+        ],
+        [
+          "0.036317855527320803112009689585898465",
+          "0.040967101120798820023962158089414292",
+          "0.040162580382086664986114147996991119",
+          "0.080325160764173329972228295993982238"
+        ]
+      ],
+      "eigenvalues": [
+        "0.040001020804875482986876549566344111",
+        "0.044168864814063708859456204838730781",
+        "0.056083864659043494002909774500341444",
+        "0.22533055637969872202781290770206927"
+      ],
+      "finite_matrix_positive_at_working_precision": true
+    },
+    {
+      "a": "1.0",
+      "complete_integer_cutoff": 8,
+      "points": [
+        "-1.0",
+        "-0.5",
+        "0.5",
+        "1.0"
+      ],
+      "matrix": [
+        [
+          "0.088014610473705053720437212816167546",
+          "0.044007305236852526860218606408083773",
+          "0.039260415191003888070993831947787035",
+          "0.034673486301849384757318276765375379"
+        ],
+        [
+          "0.044007305236852526860218606408083773",
+          "0.080325160764173329972228295993982238",
+          "0.036317855527320803112009689585898465",
+          "0.039260415191003888070993831947787035"
+        ],
+        [
+          "0.039260415191003888070993831947787035",
+          "0.036317855527320803112009689585898465",
+          "0.080325160764173329972228295993982238",
+          "0.044007305236852526860218606408083773"
+        ],
+        [
+          "0.034673486301849384757318276765375379",
+          "0.039260415191003888070993831947787035",
+          "0.044007305236852526860218606408083773",
+          "0.088014610473705053720437212816167546"
+        ]
+      ],
+      "eigenvalues": [
+        "0.036342996474640184098160032054474161",
+        "0.042017412988422287949636636524208164",
+        "0.055331016420285907873700905934667776",
+        "0.20298811659240838746383344310694947"
+      ],
+      "finite_matrix_positive_at_working_precision": true
+    },
+    {
+      "a": "2.0",
+      "complete_integer_cutoff": 55,
+      "points": [
+        "-2.0",
+        "-1.0",
+        "1.0",
+        "2.0"
+      ],
+      "matrix": [
+        [
+          "0.10668224834371133792623787210158433",
+          "0.053341124171855668963118936050792167",
+          "0.057639140510770222265070782498636884",
+          "0.07154131779851499790014469411226309"
+        ],
+        [
+          "0.053341124171855668963118936050792167",
+          "0.088014610473705053720437212816167546",
+          "0.034673486301849384757318276765375379",
+          "0.057639140510770222265070782498636884"
+        ],
+        [
+          "0.057639140510770222265070782498636884",
+          "0.034673486301849384757318276765375379",
+          "0.088014610473705053720437212816167546",
+          "0.053341124171855668963118936050792167"
+        ],
+        [
+          "0.07154131779851499790014469411226309",
+          "0.057639140510770222265070782498636884",
+          "0.053341124171855668963118936050792167",
+          "0.10668224834371133792623787210158433"
+        ]
+      ],
+      "eigenvalues": [
+        "0.03417699702959966652425631536102563",
+        "0.03605449301186941923546161587979584",
+        "0.05430505768745234246495579867908778",
+        "0.26485716990591135506867643991559451"
+      ],
+      "finite_matrix_positive_at_working_precision": true
+    }
+  ],
+  "meromorphic_checks": [
+    {
+      "z": "(0.33333333333333333333333333333333333 + 0.25j)",
+      "Q_minus_2zM_abs": "5.0732423505427123041342805378004172e-43",
+      "ratio_identity_abs_error": "3.5873240686715317015647477332221853e-43"
+    },
+    {
+      "z": "(2.0 + 1.0j)",
+      "Q_minus_2zM_abs": "0.0",
+      "ratio_identity_abs_error": "0.0"
+    },
+    {
+      "z": "(1.5 + 0.0j)",
+      "Q_minus_2zM_abs": "9.1264870679945824379839906151009764e-43",
+      "ratio_identity_abs_error": "0.0"
+    }
+  ],
+  "central_values": {
+    "m0": "0.023104993115418970788933810430339014",
+    "mu0": "0.023095708966121033814310247906495292",
+    "M_minus_quarter": "(0.023095708966121033814310247906495292 + 0.0j)",
+    "m0_minus_mu0": "0.0000092841492979369746235625238437223815"
+  },
+  "certificate_scope": "Exact rational checks plus arbitrary-precision regression; not interval certification, global kernel positivity, or source identification.",
+  "script_sha256": "5723f86cd3c31b92dd33b415ef4b2cffd1d649c8d213d69226b72fbb831c90bc"
+}
